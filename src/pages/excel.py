@@ -18,13 +18,13 @@ def update_csv(edited_data, original_data, week, data_url):
 
 def highlight_apeldoorn(val):
     """Function to apply color styling to cells containing 'Apeldoorn'."""
-    if "Apeldoorn" in str(val):
+    if "Apeldoorn" in str(val) or "apeldoorn" in str(val):
         return (
             f'<span style="background-color: #A9D08E; font-weight: bold">{val}</span>'
         )
-    elif "Thuis" in str(val):
+    elif "Thuis" in str(val) or "thuis" in str(val):
         return f'<span style="background-color: #9BC2E6;">{val}</span>'
-    elif "Vrij" in str(val) and not "Vrijdag" in str(val):
+    elif ("Vrij" in str(val) or "vrij" in str(val)) and not "Vrijdag" in str(val):
         return f'<span style="background-color: #F4B084;">{val}</span>'
     return val
 
