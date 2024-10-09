@@ -1,0 +1,27 @@
+[data-testid="stSidebarCollapsedControl"] svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+[data-testid="stSidebarCollapsedControl"] button:before {
+  content: 'MENU';
+  padding-left: 1rem;
+  font-size: 20px;
+}
+
+.dataframe td, .dataframe th {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+/** Prevent columns to go vertical on mobile mode */
+@media (max-width: 640px) {
+  .st-emotion-cache-j5r0tf {
+    min-width: 0%;
+  }
+  .st-emotion-cache-52v4ru {
+    min-width: 0%; 
+  }
+}
