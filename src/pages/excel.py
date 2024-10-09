@@ -106,7 +106,7 @@ def show_excel(data_url):
         )
 
         # Display the counts in a single line
-        st.write(f":round_pushpin: **Apeldoorn**: | {occurrences_str} |")
+        st.write(f"**Apeldoorn** | {occurrences_str} |")
 
         # Track each week separately in session state
         week_key = f"week_{week}"
