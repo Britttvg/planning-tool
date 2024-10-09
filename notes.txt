@@ -1,7 +1,5 @@
 Nog doen:
 - Dag/datum kolommen non-editable maken
-- Automatisch oude weken opruimen
-- Kleurtjes toevoegen
 - Bericht als weekplanning nog niet ingevuld/of als mensen juist wel hebben ingevuld
 - Opsplitsen menu dev/support+exposure
 - Samen tegelijkertijd werken?
