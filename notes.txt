@@ -1,6 +1,4 @@
 Nog doen:
-- Dag/datum kolommen non-editable maken
 - Bericht als weekplanning nog niet ingevuld/of als mensen juist wel hebben ingevuld
-- Opsplitsen menu dev/support+exposure
 - Samen tegelijkertijd werken?
 - Iets met standup ja/nee
