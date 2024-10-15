@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 import datetime
-import uuid  # Import the uuid library
 
 
 def update_csv(edited_data, original_data, week, data_url):
+    """Function to update the CSV file with the edited data."""
     try:
         # Overwrite the relevant rows in the original_data with the edited group
         original_data.update(edited_data)
@@ -14,6 +14,13 @@ def update_csv(edited_data, original_data, week, data_url):
         st.success(f"Data saved for week {week}.")
     except Exception as e:
         st.warning(f"Error saving data: {e}")
+
+
+def drop_rows(data_url, data, indices):
+    """Function to drop rows that are from past weeks and save the updated data."""
+    new_week_data = data.drop(indices, axis=0)
+    new_week_data.to_csv(data_url, index=False)
+    return new_week_data
 
 
 def highlight_apeldoorn(val):
@@ -50,19 +57,21 @@ def show_excel(data_url):
     saved_data = pd.read_csv(data_url)
 
     # Convert 'Datum' to datetime
-    saved_data["Datum"] = pd.to_datetime(saved_data["Datum"], format="%d-%m-%Y")
+    saved_data["Datum"] = pd.to_datetime(saved_data["Datum"])
 
     # Extract week number and year
     saved_data["Week"] = saved_data["Datum"].dt.isocalendar().week
     saved_data["Year"] = saved_data["Datum"].dt.year.astype(int)
 
-    # Identify the indices of rows to drop (where week number is less than min_week)
-    saved_data = saved_data[
-        saved_data["Week"] >= datetime.datetime.now().isocalendar().week
-    ]
-
-    # Format 'Datum' back to string format
-    saved_data["Datum"] = saved_data["Datum"].dt.strftime("%d-%m-%Y")
+    # Identify the indices of rows to drop (where week number < current week)
+    if (saved_data["Week"] < datetime.datetime.now().isocalendar().week).any():
+        saved_data = drop_rows(
+            data_url,
+            saved_data.iloc[1:],  # Skip the headers
+            saved_data.iloc[1:][
+                saved_data["Week"] < datetime.datetime.now().isocalendar().week
+            ].index,
+        )
 
     # Group by week (year currently not used)
     weeks = saved_data.groupby(["Year", "Week"])
@@ -128,6 +137,14 @@ def show_excel(data_url):
             st.session_state[week_key] = group.copy()
             st.rerun()  # Toggle the state
 
+        column_config = {
+            "Dag": st.column_config.TextColumn(disabled=True),
+            "Datum": st.column_config.DateColumn(disabled=True, format="DD-MM-YYYY"),
+            "Week": st.column_config.NumberColumn(disabled=True),
+            "Year": st.column_config.NumberColumn(disabled=True, format="%d"),
+            # All other columns can remain editable, so no need to specify them here
+        }
+
         # Display based on the current view mode
         if st.session_state[view_key]:
             # View mode: Display with color styling for 'Apeldoorn'
@@ -149,6 +166,7 @@ def show_excel(data_url):
                 ],  # Use the session state version of the group
                 hide_index=True,  # This will remove the index numbers from the first column
                 key=f"data_editor_dev_{week}",  # Unique key for each editor
+                column_config=column_config,  # Disable editing for 'Datum'
             )
 
             data_editor2 = data_editor2.fillna("-")

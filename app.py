@@ -46,9 +46,9 @@ with open("src/style/style.css", encoding="utf-8") as f:
 #########################
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
-    st.title(f"Week {datetime.today().isocalendar()[1]}")
+    st.title(f":blue[Week {datetime.today().isocalendar()[1]} - Dev]")
     excel.show_excel("src/data/data_planning_dev.csv")
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Support":
-    st.title(f"Week {datetime.today().isocalendar()[1]}")
+    st.title(f":orange[Week {datetime.today().isocalendar()[1]} - Support]")
     excel.show_excel("src/data/data_planning_support.csv")
