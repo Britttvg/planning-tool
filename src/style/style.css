@@ -25,3 +25,21 @@
     min-width: 0%; 
   }
 }
+
+.submit_button:hover {
+  border: 1px solid #ff4b4b;
+  color: #ff4b4b;
+}
+
+.submit_button:active, .submit_button:focus {
+  background-color: #ff4b4b;
+  color: white;
+  border: 1px solid #ff4b4b;
+}
+
+.submit_button {
+  background-color: white;
+  display: inline-block; margin: 0; padding: 8px 16px;
+  text-align: center; border: 1px solid #ccc;
+  border-radius: 8px; font-size: 16px; margin-bottom: 1em;
+}

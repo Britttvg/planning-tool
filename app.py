@@ -64,6 +64,16 @@ def check_password():
         on_change=password_entered,
         key="password",
     )
+    # Use Markdown with HTML to style text as a button
+    button_html = """
+    <button class="submit_button">
+        Submit
+    </button>
+    """
+
+    # Display the "button" using st.markdown
+    st.markdown(button_html, unsafe_allow_html=True)
+
     if "password_correct" in st.session_state:
         st.error("😕 Onjuist wachtwoord")
     return False
