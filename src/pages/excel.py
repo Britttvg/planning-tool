@@ -155,7 +155,7 @@ def show_excel(data_url, ical_file):
 
             # Check each relevant column for occurrences of 'Apeldoorn'
             for col in relevant_columns:
-                if "Apeldoorn" in str(row[col]):
+                if "Apeldoorn" in str(row[col]) or "apeldoorn" in str(row[col]):
                     occurrences_per_day[day] += 1  # Increment count if found
 
         # Prepare the output string to display counts in a single line
@@ -168,10 +168,18 @@ def show_excel(data_url, ical_file):
         st.write(f"**Apeldoorn** | {occurrences_str} |")
         # Display based on the current view mode
         if st.session_state[view_key]:
+
             # View mode: Display with color styling for 'Apeldoorn'
             styled_data = group.copy().astype(
                 str
             )  # Ensure all data is string for replacement
+            styled_data["Datum"] = pd.to_datetime(
+                styled_data["Datum"], format="%Y-%m-%d", errors="coerce"
+            )
+            # Format the dates to "DD-MM-YYYY", leave other values unchanged
+            styled_data["Datum"] = (
+                styled_data["Datum"].dt.strftime("%d-%m-%Y").fillna(group["Datum"])
+            )
             styled_data = styled_data.map(highlight_apeldoorn)
 
             # Render the DataFrame as HTML using st.write()
