@@ -15,7 +15,7 @@ with st.sidebar:
         "Menu",
         [
             f"Week {datetime.today().isocalendar()[1]} - Dev",
-            f"Week {datetime.today().isocalendar()[1]} - Support",
+            f"Week {datetime.today().isocalendar()[1]} - Support - Exposure",
         ],
         # Icons from https://icons.getbootstrap.com
         icons=[
@@ -49,6 +49,6 @@ if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
     st.title(f":blue[Week {datetime.today().isocalendar()[1]} - Dev]")
     excel.show_excel("src/data/data_planning_dev.csv")
 
-if choice == f"Week {datetime.today().isocalendar()[1]} - Support":
-    st.title(f":orange[Week {datetime.today().isocalendar()[1]} - Support]")
+if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
+    st.title(f":orange[Week {datetime.today().isocalendar()[1]} - Support - Exposure]")
     excel.show_excel("src/data/data_planning_support.csv")
