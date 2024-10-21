@@ -62,4 +62,4 @@ venv.bak/
 
 .vscode
 notes.txt
-auth.txt
+.streamlit/secrets.toml
