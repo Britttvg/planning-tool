@@ -93,7 +93,7 @@ def show_excel(data_url, ical_file):
 
     # Display today's date
     st.write(
-        f"**:calendar: Today**: {datetime.datetime.now().date().strftime('%A %d-%m-%Y')}"
+        f"**:calendar: Vandaag**: {datetime.datetime.now().date().strftime('%A %d-%m-%Y')}"
     )
 
     saved_data = pd.read_csv(data_url)
