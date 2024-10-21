@@ -66,10 +66,16 @@ def highlight_apeldoorn(val):
     return val
 
 
+def toggle_view_state(view_key, week_key, group):
+    st.session_state[view_key] = not st.session_state[view_key]
+    st.session_state[week_key] = group.copy()
+
+
 def show_excel(data_url, ical_file):
 
     st.download_button(
-        label="Download iCal File",
+        label="iCal",
+        icon=":material/download:",
         data=ical_file,
         file_name="data_planning.ics",
         mime="text/calendar",
@@ -122,6 +128,26 @@ def show_excel(data_url, ical_file):
         # Get all columns except 'Dag' and 'Datum'
         relevant_columns = group.columns.difference(["Dag", "Datum"])
 
+        # Track each week separately in session state
+        week_key = f"week_{week}"
+
+        if week_key not in st.session_state:
+            st.session_state[week_key] = group.copy()
+
+        # Create a toggle for view mode
+        view_key = f"view_{week}"
+        if view_key not in st.session_state:
+            st.session_state[view_key] = False  # Default is editable mode
+
+        # Toggle button to switch between views
+        st.toggle(
+            label=":art:",
+            value=st.session_state[view_key],
+            key=f"toggle_{week}",
+            on_change=toggle_view_state,
+            args=(view_key, week_key, group),
+        )
+
         for index, row in group.iterrows():
             day = row["Dag"]  # Assuming 'Dag' column contains the day of the week
             if day not in occurrences_per_day:
@@ -140,27 +166,6 @@ def show_excel(data_url, ical_file):
 
         # Display the counts in a single line
         st.write(f"**Apeldoorn** | {occurrences_str} |")
-
-        # Track each week separately in session state
-        week_key = f"week_{week}"
-
-        if week_key not in st.session_state:
-            st.session_state[week_key] = group.copy()
-
-        # Create a toggle for view mode
-        view_key = f"view_{week}"
-        if view_key not in st.session_state:
-            st.session_state[view_key] = False  # Default is editable mode
-
-        # Toggle button to switch between views
-        if st.button(
-            (f"View mode" if not st.session_state[view_key] else f"Edit mode"),
-            key=f"toggle_{week}",
-        ):
-            st.session_state[view_key] = not st.session_state[view_key]
-            st.session_state[week_key] = group.copy()
-            st.rerun()  # Toggle the state
-
         # Display based on the current view mode
         if st.session_state[view_key]:
             # View mode: Display with color styling for 'Apeldoorn'
