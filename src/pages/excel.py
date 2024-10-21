@@ -85,7 +85,7 @@ def show_excel(data_url):
     saved_data = pd.read_csv(data_url)
 
     # Convert 'Datum' to datetime
-    saved_data["Datum"] = pd.to_datetime(saved_data["Datum"])
+    saved_data["Datum"] = pd.to_datetime(saved_data["Datum"], dayfirst=False)
 
     # Extract week number and year
     saved_data["Week"] = saved_data["Datum"].dt.isocalendar().week

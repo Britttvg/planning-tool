@@ -50,13 +50,16 @@ if "authenticated" not in st.session_state:
 
 @st.dialog("Voer wachtwoord in")
 def password_dialog():
-    password_input = st.text_input("Wachtwoord", type="password")
-    if st.button("Submit"):
-        if password_input == correct_password:
-            st.session_state.authenticated = True
-            st.rerun()  # Refresh the app state
-        else:
-            st.error("Onjuist wachtwoord.")
+    with st.form(key="password_form"):
+        password_input = st.text_input("Wachtwoord", type="password")
+        # Submit button inside the form
+        submit_button = st.form_submit_button("Submit")
+        if submit_button:
+            if password_input == correct_password:
+                st.session_state.authenticated = True
+                st.rerun()  # Refresh the app state
+            else:
+                st.error("Onjuist wachtwoord.")
 
 
 if st.session_state.authenticated == False:
