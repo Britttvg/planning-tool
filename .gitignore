@@ -62,3 +62,5 @@ venv.bak/
 
 .vscode
 *.csv
+notes.txt
+auth.txt

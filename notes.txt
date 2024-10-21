@@ -1,4 +1,0 @@
-Nog doen:
-- Bericht als weekplanning nog niet ingevuld/of als mensen juist wel hebben ingevuld
-- Samen tegelijkertijd werken?
-- Iets met standup ja/nee

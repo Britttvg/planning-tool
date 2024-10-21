@@ -1,7 +1,6 @@
-from src.pages import planning, design, excel
+from src.pages import excel
 import streamlit as st
 from streamlit_option_menu import option_menu
-import pandas as pd
 from datetime import datetime
 
 st.set_page_config(
@@ -41,14 +40,42 @@ with st.sidebar:
 with open("src/style/style.css", encoding="utf-8") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+# The correct password
+correct_password = "test"
+
+# Initialize session state for password check
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+
+@st.dialog("Voer wachtwoord in")
+def password_dialog():
+    password_input = st.text_input("Wachtwoord", type="password")
+    if st.button("Submit"):
+        if password_input == correct_password:
+            st.session_state.authenticated = True
+            st.rerun()  # Refresh the app state
+        else:
+            st.error("Onjuist wachtwoord.")
+
+
+if st.session_state.authenticated == False:
+    password_dialog()
+
 #########################
 ######### PAGES #########
 #########################
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
     st.title(f":blue[Week {datetime.today().isocalendar()[1]} - Dev]")
-    excel.show_excel("src/data/data_planning_dev.csv")
+    if st.session_state.authenticated:
+        excel.show_excel("src/data/data_planning_dev.csv")
+    else:
+        st.warning("You need to be authenticated to view this page.")
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
     st.title(f":orange[Week {datetime.today().isocalendar()[1]} - Support - Exposure]")
-    excel.show_excel("src/data/data_planning_support.csv")
+    if st.session_state.authenticated:
+        excel.show_excel("src/data/data_planning_support.csv")
+    else:
+        st.warning("You need to be authenticated to view this page.")
