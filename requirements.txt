@@ -1,3 +1,4 @@
 streamlit_option_menu
 streamlit
 streamlit_antd_components
+icalendar

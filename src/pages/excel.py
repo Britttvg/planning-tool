@@ -19,7 +19,7 @@ column_config = {
     "Dag": st.column_config.TextColumn(disabled=True),
     "Datum": st.column_config.DateColumn(disabled=True, format="DD-MM-YYYY"),
     "Week": st.column_config.NumberColumn(disabled=True),
-    "Year": st.column_config.NumberColumn(disabled=True, format="%d"),
+    "Jaar": st.column_config.NumberColumn(disabled=True, format="%d"),
     # All other columns can remain editable, so no need to specify them here
 }
 
@@ -66,7 +66,15 @@ def highlight_apeldoorn(val):
     return val
 
 
-def show_excel(data_url):
+def show_excel(data_url, ical_file):
+
+    st.download_button(
+        label="Download iCal File",
+        data=ical_file,
+        file_name="data_planning.ics",
+        mime="text/calendar",
+    )
+
     # Save the data_url choice in session state
     if (
         "data_url_choice" not in st.session_state
@@ -89,7 +97,7 @@ def show_excel(data_url):
 
     # Extract week number and year
     saved_data["Week"] = saved_data["Datum"].dt.isocalendar().week
-    saved_data["Year"] = saved_data["Datum"].dt.year.astype(int)
+    saved_data["Jaar"] = saved_data["Datum"].dt.year.astype(int)
 
     # Identify the indices of rows to drop (where week number < current week)
     if (saved_data["Week"] < datetime.datetime.now().isocalendar().week).any():
@@ -102,12 +110,11 @@ def show_excel(data_url):
         )
 
     # Group by week (year currently not used)
-    weeks = saved_data.groupby(["Year", "Week"])
+    weeks = saved_data.groupby(["Jaar", "Week"])
 
     for (_, week), group in weeks:
         # Display a subheader for each week
-        if week != datetime.datetime.now().isocalendar()[1]:
-            st.subheader(f"Week {week}")
+        st.subheader(f"Week {week}")
 
         # Count occurrences of 'Apeldoorn' per day of the week for all relevant columns
         occurrences_per_day = {}

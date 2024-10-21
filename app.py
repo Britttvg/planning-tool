@@ -1,4 +1,4 @@
-from src.pages import excel
+from src.pages import excel, ical
 import streamlit as st
 from streamlit_option_menu import option_menu
 from datetime import datetime
@@ -77,9 +77,11 @@ if not check_password():
 #########################
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
-    st.title(f":blue[Week {datetime.today().isocalendar()[1]} - Dev]")
-    excel.show_excel("src/data/data_planning_dev.csv")
+    st.title(f":blue[Dev]")
+    ical_file = ical.create_ical("src/data/data_planning_dev.csv")
+    excel.show_excel("src/data/data_planning_dev.csv", ical_file)
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
-    st.title(f":orange[Week {datetime.today().isocalendar()[1]} - Support - Exposure]")
-    excel.show_excel("src/data/data_planning_support.csv")
+    st.title(f":orange[Support - Exposure]")
+    ical_file = ical.create_ical("src/data/data_planning_support.csv")
+    excel.show_excel("src/data/data_planning_support.csv", ical_file)
