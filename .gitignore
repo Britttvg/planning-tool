@@ -61,6 +61,5 @@ env.bak/
 venv.bak/
 
 .vscode
-src/data
 notes.txt
 auth.txt

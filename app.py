@@ -41,7 +41,7 @@ with open("src/style/style.css", encoding="utf-8") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # The correct password
-correct_password = "src/auth.txt"
+correct_password = open("auth.txt").read().strip()
 
 # Initialize session state for password check
 if "authenticated" not in st.session_state:
