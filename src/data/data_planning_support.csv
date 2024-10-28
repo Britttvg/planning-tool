@@ -1,4 +1,4 @@
-Dag,Datum,Benjamin,Rutger,Marc,Sanne,Freddy,Henry,Mariska,Josje,Eline,Lot,Marijke,Daniël,Week,Jaar
+Dag,Datum,Benjamin,Rutger,Marc,Sanne,Freddy,Henry,Mariska,Josje,Eline,Lot,Marijke,DaniÃ«l,Week,Jaar
 Maandag,2024-10-28,-,-,Thuis,Thuis,Thuis,Thuis,vrij,vrij,-,Thuis,Thuis,Thuis,44,2024
 Dinsdag,2024-10-29,-,-,PL: Apeldoorn,Thuis,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,vrij,-,Thuis,Thuis,PL: Apeldoorn,44,2024
 Woensdag,2024-10-30,-,vrij,PL: Apeldoorn,Thuis,Thuis (1/2 dag),Thuis,PL: Kabelweg,Thuis,-,Thuis,Thuis,Thuis,44,2024
@@ -13,7 +13,7 @@ Maandag,2024-11-11,-,-,Thuis,Thuis,Thuis,-,Thuis,vrij,-,Enschede,Thuis,Thuis,46,
 Dinsdag,2024-11-12,-,-,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,-,PL: Apeldoorn,vrij,-,Kennisdag HOVJ,Thuis,PL: Apeldoorn,46,2024
 Woensdag,2024-11-13,-,vrij,PL: Apeldoorn,Thuis,Thuis (1/2 dag),-,Politieorkest,Thuis,-,PL: Apeldoorn,PL: Apeldoorn,Thuis,46,2024
 Donderdag,2024-11-14,-,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,-,Thuis,PL: Apeldoorn,-,HOVJ,PL: Apeldoorn,PL: Apeldoorn,46,2024
-Vrijdag,2024-11-15,-,vrij,vrij,vrij,-,-,Politieorkest,PL: Apeldoorn,-,vrij,vrij,vrij,46,2024
+Vrijdag,2024-11-15,-,-,vrij,vrij,-,-,Politieorkest,PL: Apeldoorn,-,vrij,vrij,vrij,46,2024
 Maandag,2024-11-18,-,-,-,Thuis,Thuis,-,-,vrij,-,PL: Apeldoorn,Opleiding Raffinaderij Apeldoorn,Thuis,47,2024
 Dinsdag,2024-11-19,-,-,-,PL: Apeldoorn,PL: Apeldoorn,-,-,PL: Apeldoorn,-,Opleiding Raffinaderij Apeldoorn,Opleiding Raffinaderij Apeldoorn,PL: Apeldoorn,47,2024
 Woensdag,2024-11-20,-,vrij,Retro Dev,Thuis,Thuis (1/2 dag),-,-,vrij,-,Thuis,Thuis,Thuis,47,2024
@@ -39,13 +39,13 @@ Dinsdag,2024-12-17,-,-,-,PL: Apeldoorn,-,Vakantie,-,PL: Apeldoorn,-,-,Thuis,PL: 
 Woensdag,2024-12-18,-,vrij,-,Thuis,-,Vakantie,-,vrij,-,-,Opleiding Raffinaderij Apeldoorn,Thuis,51,2024
 Donderdag,2024-12-19,-,PL: Apeldoorn,-,PL: Apeldoorn,-,Vakantie,-,PL: Apeldoorn,-,-,PL: Apeldoorn,PL: Apeldoorn,51,2024
 Vrijdag,2024-12-20,-,-,-,Thuis,-,Vakantie,-,Thuis,-,-,vrij,vrij,51,2024
-Maandag,2024-12-23,-,vrij,Thuis,Thuis,-,vrij,-,-,-,-,-,-,52,2024
-Dinsdag,2024-12-24,-,vrij,Thuis,PL: Apeldoorn,-,vrij,-,-,-,-,-,-,52,2024
+Maandag,2024-12-23,-,-,vrij,Thuis,-,vrij,-,-,-,-,-,-,52,2024
+Dinsdag,2024-12-24,-,-,vrij,PL: Apeldoorn,-,vrij,-,-,-,-,-,-,52,2024
 Woensdag,2024-12-25,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,52,2024
 Donderdag,2024-12-26,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,52,2024
-Vrijdag,2024-12-27,-,vrij,vrij,vrij,-,vrij,-,-,-,-,vrij,-,52,2024
-Maandag,2025-12-30,-,-,-,-,-,-,-,-,-,-,-,-,53,2025
-Dinsdag,2025-12-31,-,-,-,-,-,-,-,-,-,-,-,-,53,2025
-Woensdag,2025-01-01,-,-,-,-,-,-,-,-,-,-,-,-,53,2025
-Donderdag,2025-01-02,-,-,-,-,-,-,-,-,-,-,-,-,53,2025
-Vrijdag,2025-01-03,-,-,-,-,-,-,-,-,-,-,-,-,53,2025
+Vrijdag,2024-12-27,-,-,vrij,vrij,-,vrij,-,-,-,-,vrij,-,52,2024
+Maandag,2025-12-30,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
+Dinsdag,2025-12-31,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
+Woensdag,2025-01-01,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
+Donderdag,2025-01-02,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
+Vrijdag,2025-01-03,-,-,-,-,-,-,-,-,-,-,-,-,1,2025

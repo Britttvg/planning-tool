@@ -4,9 +4,7 @@ from streamlit_option_menu import option_menu
 from datetime import datetime
 import hmac
 
-st.set_page_config(
-    page_title="Planning tool-test", page_icon=":calendar:", layout="wide"
-)
+st.set_page_config(page_title="Planning tool", page_icon=":calendar:", layout="wide")
 
 ### Menu ###
 with st.sidebar:
