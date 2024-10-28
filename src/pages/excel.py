@@ -37,12 +37,13 @@ def download_all_weeks_csv(data_url):
     # Prepare CSV for download
     csv_data = all_data.to_csv(index=False).encode("utf-8")
 
+    base_name = data_url.split("/")[-1].split(".")[0]
     # Download button for the entire data CSV
     st.download_button(
         label="Download alle data (CSV)",
         icon=":material/download:",
         data=csv_data,
-        file_name="all_weeks_data.csv",
+        file_name=f"all_weeks_{base_name}.csv",
         mime="text/csv",
     )
 
@@ -142,91 +143,92 @@ def show_excel(data_url, ical_file):
     weeks = saved_data.groupby(["Jaar", "Week"])
 
     for (_, week), group in weeks:
-        # Display a subheader for each week
-        st.subheader(f"Week {week}")
+        if week >= datetime.datetime.now().isocalendar().week:
+            # Display a subheader for each week
+            st.subheader(f"Week {week}")
 
-        # Count occurrences of 'Apeldoorn' per day of the week for all relevant columns
-        occurrences_per_day = {}
+            # Count occurrences of 'Apeldoorn' per day of the week for all relevant columns
+            occurrences_per_day = {}
 
-        # Get all columns except 'Dag' and 'Datum'
-        relevant_columns = group.columns.difference(["Dag", "Datum"])
+            # Get all columns except 'Dag' and 'Datum'
+            relevant_columns = group.columns.difference(["Dag", "Datum"])
 
-        # Track each week separately in session state
-        week_key = f"week_{week}"
+            # Track each week separately in session state
+            week_key = f"week_{week}"
 
-        if week_key not in st.session_state:
-            st.session_state[week_key] = group.copy()
+            if week_key not in st.session_state:
+                st.session_state[week_key] = group.copy()
 
-        # Create a toggle for view mode
-        view_key = f"view_{week}"
-        if view_key not in st.session_state:
-            st.session_state[view_key] = False  # Default is editable mode
+            # Create a toggle for view mode
+            view_key = f"view_{week}"
+            if view_key not in st.session_state:
+                st.session_state[view_key] = False  # Default is editable mode
 
-        # Toggle button to switch between views
-        st.toggle(
-            label=":art:",
-            value=st.session_state[view_key],
-            key=f"toggle_{week}",
-            on_change=toggle_view_state,
-            args=(view_key, week_key, group),
-        )
-
-        for index, row in group.iterrows():
-            day = row["Dag"]  # Assuming 'Dag' column contains the day of the week
-            if day not in occurrences_per_day:
-                occurrences_per_day[day] = 0  # Initialize count for the day
-
-            # Check each relevant column for occurrences of 'Apeldoorn'
-            for col in relevant_columns:
-                if "Apeldoorn" in str(row[col]) or "apeldoorn" in str(row[col]):
-                    occurrences_per_day[day] += 1  # Increment count if found
-
-        # Prepare the output string to display counts in a single line
-        occurrences_str = " | ".join(
-            f"**{day_abbreviations.get(day, day)} :{'red' if count == 0 else 'green'}[{count}]**"
-            for day, count in occurrences_per_day.items()
-        )
-
-        # Display the counts in a single line
-        st.write(f"**Apeldoorn** | {occurrences_str} |")
-        # Display based on the current view mode
-        if st.session_state[view_key]:
-
-            # View mode: Display with color styling for 'Apeldoorn'
-            styled_data = group.copy().astype(
-                str
-            )  # Ensure all data is string for replacement
-            styled_data["Datum"] = pd.to_datetime(
-                styled_data["Datum"], format="%Y-%m-%d", errors="coerce"
-            )
-            # Format the dates to "DD-MM-YYYY", leave other values unchanged
-            styled_data["Datum"] = (
-                styled_data["Datum"].dt.strftime("%d-%m-%Y").fillna(group["Datum"])
-            )
-            styled_data = styled_data.map(highlight_apeldoorn)
-
-            # Render the DataFrame as HTML using st.write()
-            st.write(
-                styled_data.to_html(escape=False, index=False),
-                unsafe_allow_html=True,
+            # Toggle button to switch between views
+            st.toggle(
+                label=":art:",
+                value=st.session_state[view_key],
+                key=f"toggle_{week}",
+                on_change=toggle_view_state,
+                args=(view_key, week_key, group),
             )
 
-        else:
-            data_editor2 = st.data_editor(
-                st.session_state[
-                    week_key
-                ],  # Use the session state version of the group
-                hide_index=True,  # Hide the index column
-                key=f"data_editor_dev_{week}",  # Unique key for each editor
-                column_config=column_config,  # Disable editing for 'Datum'
+            for index, row in group.iterrows():
+                day = row["Dag"]  # Assuming 'Dag' column contains the day of the week
+                if day not in occurrences_per_day:
+                    occurrences_per_day[day] = 0  # Initialize count for the day
+
+                # Check each relevant column for occurrences of 'Apeldoorn'
+                for col in relevant_columns:
+                    if "Apeldoorn" in str(row[col]) or "apeldoorn" in str(row[col]):
+                        occurrences_per_day[day] += 1  # Increment count if found
+
+            # Prepare the output string to display counts in a single line
+            occurrences_str = " | ".join(
+                f"**{day_abbreviations.get(day, day)} :{'red' if count == 0 else 'green'}[{count}]**"
+                for day, count in occurrences_per_day.items()
             )
 
-            data_editor2 = data_editor2.fillna("-")
+            # Display the counts in a single line
+            st.write(f"**Apeldoorn** | {occurrences_str} |")
+            # Display based on the current view mode
+            if st.session_state[view_key]:
 
-            # If data is changed, update the CSV file
-            if not data_editor2.equals(st.session_state[week_key]):
+                # View mode: Display with color styling for 'Apeldoorn'
+                styled_data = group.copy().astype(
+                    str
+                )  # Ensure all data is string for replacement
+                styled_data["Datum"] = pd.to_datetime(
+                    styled_data["Datum"], format="%Y-%m-%d", errors="coerce"
+                )
+                # Format the dates to "DD-MM-YYYY", leave other values unchanged
+                styled_data["Datum"] = (
+                    styled_data["Datum"].dt.strftime("%d-%m-%Y").fillna(group["Datum"])
+                )
+                styled_data = styled_data.map(highlight_apeldoorn)
 
-                # Call update_csv to save the changes for the specific week using the unique name
-                update_csv(data_editor2, saved_data, week, data_url)
+                # Render the DataFrame as HTML using st.write()
+                st.write(
+                    styled_data.to_html(escape=False, index=False),
+                    unsafe_allow_html=True,
+                )
+
+            else:
+                data_editor2 = st.data_editor(
+                    st.session_state[
+                        week_key
+                    ],  # Use the session state version of the group
+                    hide_index=True,  # Hide the index column
+                    key=f"data_editor_dev_{week}",  # Unique key for each editor
+                    column_config=column_config,  # Disable editing for 'Datum'
+                )
+
+                data_editor2 = data_editor2.fillna("-")
+
+                # If data is changed, update the CSV file
+                if not data_editor2.equals(st.session_state[week_key]):
+
+                    # Call update_csv to save the changes for the specific week using the unique name
+                    update_csv(data_editor2, saved_data, week, data_url)
     # Call the download function after processing all weeks in `show_excel`
     download_all_weeks_csv(data_url)
