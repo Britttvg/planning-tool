@@ -24,6 +24,29 @@ column_config = {
 }
 
 
+# Concatenate data from all weeks into a single DataFrame and offer a download button
+def download_all_weeks_csv(data_url):
+    """Function to concatenate all weeks' data into a single CSV for download."""
+    # Load all data from the CSV
+    all_data = pd.read_csv(data_url)
+
+    # Convert 'Datum' to datetime if needed
+    if all_data["Datum"].dtype == "object":
+        all_data["Datum"] = pd.to_datetime(all_data["Datum"], dayfirst=False)
+
+    # Prepare CSV for download
+    csv_data = all_data.to_csv(index=False).encode("utf-8")
+
+    # Download button for the entire data CSV
+    st.download_button(
+        label="Download alle data (CSV)",
+        icon=":material/download:",
+        data=csv_data,
+        file_name="all_weeks_data.csv",
+        mime="text/csv",
+    )
+
+
 def update_csv(edited_data, original_data, week, data_url):
     """Function to update the CSV file with the edited data."""
     try:
@@ -37,13 +60,13 @@ def update_csv(edited_data, original_data, week, data_url):
         st.warning(f"Error saving data: {e}")
 
 
-def drop_rows(data_url, data, indices):
-    """Function to drop rows that are from past weeks and save the updated data."""
-    new_week_data = data.drop(indices, axis=0)
-    data.reset_index(drop=True, inplace=True)
-    new_week_data.to_csv(data_url, index=False)
-    st.rerun()
-    return new_week_data
+# def drop_rows(data_url, data, indices):
+#     """Function to drop rows that are from past weeks and save the updated data."""
+#     new_week_data = data.drop(indices, axis=0)
+#     data.reset_index(drop=True, inplace=True)
+#     new_week_data.to_csv(data_url, index=False)
+#     st.rerun()
+#     return new_week_data
 
 
 def reset_session_state_week():
@@ -106,14 +129,14 @@ def show_excel(data_url, ical_file):
     saved_data["Jaar"] = saved_data["Datum"].dt.year.astype(int)
 
     # Identify the indices of rows to drop (where week number < current week)
-    if (saved_data["Week"] < datetime.datetime.now().isocalendar().week).any():
-        saved_data = drop_rows(
-            data_url,
-            saved_data.iloc[1:],  # Skip the headers
-            saved_data.iloc[1:][
-                saved_data["Week"] < datetime.datetime.now().isocalendar().week
-            ].index,
-        )
+    # if (saved_data["Week"] < datetime.datetime.now().isocalendar().week).any():
+    #     saved_data = drop_rows(
+    #         data_url,
+    #         saved_data.iloc[1:],  # Skip the headers
+    #         saved_data.iloc[1:][
+    #             saved_data["Week"] < datetime.datetime.now().isocalendar().week
+    #         ].index,
+    #     )
 
     # Group by week (year currently not used)
     weeks = saved_data.groupby(["Jaar", "Week"])
@@ -205,3 +228,5 @@ def show_excel(data_url, ical_file):
 
                 # Call update_csv to save the changes for the specific week using the unique name
                 update_csv(data_editor2, saved_data, week, data_url)
+    # Call the download function after processing all weeks in `show_excel`
+    download_all_weeks_csv(data_url)
