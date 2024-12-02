@@ -1,29 +1,4 @@
 Dag,Datum,Benjamin,Rutger,Marc,Sanne,Freddy,Henry,Mariska,Josje,Eline,Lot,Marijke,Daniël,Week,Jaar
-Maandag,2024-10-28,-,-,Thuis,Thuis,Thuis,Thuis,vrij,vrij,-,Thuis,Thuis,Thuis,44,2024
-Dinsdag,2024-10-29,-,-,PL: Apeldoorn,Thuis,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,vrij,-,Thuis,Thuis,PL: Apeldoorn,44,2024
-Woensdag,2024-10-30,-,vrij,PL: Apeldoorn,Thuis,Thuis (1/2 dag),Thuis,PL: Kabelweg,Thuis,-,Thuis,Thuis,Thuis,44,2024
-Donderdag,2024-10-31,-,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Ede,PL: Apeldoorn,-,HOVJ,PL: Apeldoorn,PL: Apeldoorn,44,2024
-Vrijdag,2024-11-01,-,-,vrij,vrij,vrij,vrij,vrij,PL: Apeldoorn,-,vrij,vrij,vrij,44,2024
-Maandag,2024-11-04,-,-,Thuis,Thuis,Thuis,Thuis,Thuis,vrij,-,IBT/piket,Thuis,Thuis,45,2024
-Dinsdag,2024-11-05,-,-,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,-,Thuis/piket,Thuis,PL: Apeldoorn,45,2024
-Woensdag,2024-11-06,-,vrij,PL: Apeldoorn,Thuis,Thuis (1/2 dag),Thuis,Politieorkest,vrij,-,Thuis/piket,Thuis,Thuis,45,2024
-Donderdag,2024-11-07,-,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Enschede,DRIO Bijeenkomst @Enschede,Thuis,PL: Apeldoorn,-,PDB/piket,Opleiding PDB,PL: Apeldoorn,45,2024
-Vrijdag,2024-11-08,-,-,vrij,vrij,vrij,vrij,vrij,Thuis,-,vrij/piket,vrij,vrij,45,2024
-Maandag,2024-11-11,-,-,Thuis,Thuis,Thuis,-,Thuis,vrij,-,Enschede,Thuis,Thuis,46,2024
-Dinsdag,2024-11-12,-,-,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,-,PL: Apeldoorn,vrij,-,Kennisdag HOVJ,Thuis,PL: Apeldoorn,46,2024
-Woensdag,2024-11-13,-,vrij,PL: Apeldoorn,Thuis,Thuis (1/2 dag),-,Politieorkest,Thuis,-,PL: Apeldoorn,PL: Apeldoorn,Thuis,46,2024
-Donderdag,2024-11-14,-,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,PL: Apeldoorn,-,Thuis,PL: Apeldoorn,-,HOVJ,PL: Apeldoorn,PL: Apeldoorn,46,2024
-Vrijdag,2024-11-15,-,-,vrij,vrij,-,-,Politieorkest,PL: Apeldoorn,-,vrij,vrij,vrij,46,2024
-Maandag,2024-11-18,-,-,-,Thuis,Thuis,-,-,vrij,-,PL: Apeldoorn,Opleiding Raffinaderij Apeldoorn,Thuis,47,2024
-Dinsdag,2024-11-19,-,-,-,PL: Apeldoorn,PL: Apeldoorn,-,-,PL: Apeldoorn,-,Opleiding Raffinaderij Apeldoorn,Opleiding Raffinaderij Apeldoorn,PL: Apeldoorn,47,2024
-Woensdag,2024-11-20,-,vrij,Retro Dev,Thuis,Thuis (1/2 dag),-,-,vrij,-,Thuis,Thuis,Thuis,47,2024
-Donderdag,2024-11-21,-,PL: Apeldoorn,-,PL: Apeldoorn,PL: Apeldoorn,-,Politieorkest,PL: Apeldoorn,-,Opleiding PDB,Opleiding PDB,PL: Apeldoorn,47,2024
-Vrijdag,2024-11-22,-,-,-,Thuis,vrij,-,-,Thuis,-,vrij,vrij,vrij,47,2024
-Maandag,2024-11-25,-,-,-,vrij,Thuis,-,-,vrij,-,-,Thuis,Thuis,48,2024
-Dinsdag,2024-11-26,-,-,-,vrij,PL: Apeldoorn,-,Politieorkest,vrij,-,-,Thuis,PL: Apeldoorn,48,2024
-Woensdag,2024-11-27,-,vrij,-,vrij,Thuis (1/2 dag),-,-,Thuis,-,-,Thuis,Thuis,48,2024
-Donderdag,2024-11-28,-,PL: Apeldoorn,-,vrij,PL: Apeldoorn,-,-,PL: Apeldoorn,-,-,PL: Apeldoorn,PL: Apeldoorn,48,2024
-Vrijdag,2024-11-29,-,-,-,vrij,vrij,- ,-,PL: Apeldoorn,-,-,vrij,vrij,48,2024
 Maandag,2024-12-02,-,-,-,vrij,-,-,-,vrij,-,-,Thuis,Thuis,49,2024
 Dinsdag,2024-12-03,-,-,-,vrij,-,-,-,PL: Apeldoorn,-,-,Thuis,PL: Apeldoorn,49,2024
 Woensdag,2024-12-04,-,vrij,-,vrij,-,-,Politieorkest,vrij,-,-,Thuis,Thuis,49,2024
@@ -44,8 +19,93 @@ Dinsdag,2024-12-24,-,-,vrij,PL: Apeldoorn,-,vrij,-,-,-,-,-,-,52,2024
 Woensdag,2024-12-25,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,52,2024
 Donderdag,2024-12-26,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,Kerst,52,2024
 Vrijdag,2024-12-27,-,-,vrij,vrij,-,vrij,-,-,-,-,vrij,-,52,2024
-Maandag,2025-12-30,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
-Dinsdag,2025-12-31,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
+Maandag,2024-12-30,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
+Dinsdag,2024-12-31,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
 Woensdag,2025-01-01,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
 Donderdag,2025-01-02,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
 Vrijdag,2025-01-03,-,-,-,-,-,-,-,-,-,-,-,-,1,2025
+Maandag,2025-01-06,-,-,-,-,-,-,-,-,-,-,-,-,2,2025
+Dinsdag,2025-01-07,-,-,-,-,-,-,-,-,-,-,-,-,2,2025
+Woensdag,2025-01-08,-,-,-,-,-,-,-,-,-,-,-,-,2,2025
+Donderdag,2025-01-09,-,-,-,-,-,-,-,-,-,-,-,-,2,2025
+Vrijdag,2025-01-10,-,-,-,-,-,-,-,-,-,-,-,-,2,2025
+Maandag,2025-01-13,-,-,-,-,-,-,-,-,-,-,-,-,3,2025
+Dinsdag,2025-01-14,-,-,-,-,-,-,-,-,-,-,-,-,3,2025
+Woensdag,2025-01-15,-,-,-,-,-,-,-,-,-,-,-,-,3,2025
+Donderdag,2025-01-16,-,-,-,-,-,-,-,-,-,-,-,-,3,2025
+Vrijdag,2025-01-17,-,-,-,-,-,-,-,-,-,-,-,-,3,2025
+Maandag,2025-01-20,-,-,-,-,-,-,-,-,-,-,-,-,4,2025
+Dinsdag,2025-01-21,-,-,-,-,-,-,-,-,-,-,-,-,4,2025
+Woensdag,2025-01-22,-,-,-,-,-,-,-,-,-,-,-,-,4,2025
+Donderdag,2025-01-23,-,-,-,-,-,-,-,-,-,-,-,-,4,2025
+Vrijdag,2025-01-24,-,-,-,-,-,-,-,-,-,-,-,-,4,2025
+Maandag,2025-01-27,-,-,-,-,-,-,-,-,-,-,-,-,5,2025
+Dinsdag,2025-01-28,-,-,-,-,-,-,-,-,-,-,-,-,5,2025
+Woensdag,2025-01-29,-,-,-,-,-,-,-,-,-,-,-,-,5,2025
+Donderdag,2025-01-30,-,-,-,-,-,-,-,-,-,-,-,-,5,2025
+Vrijdag,2025-01-31,-,-,-,-,-,-,-,-,-,-,-,-,5,2025
+Maandag,2025-02-03,-,-,-,-,-,-,-,-,-,-,-,-,6,2025
+Dinsdag,2025-02-04,-,-,-,-,-,-,-,-,-,-,-,-,6,2025
+Woensdag,2025-02-05,-,-,-,-,-,-,-,-,-,-,-,-,6,2025
+Donderdag,2025-02-06,-,-,-,-,-,-,-,-,-,-,-,-,6,2025
+Vrijdag,2025-02-07,-,-,-,-,-,-,-,-,-,-,-,-,6,2025
+Maandag,2025-02-10,-,-,-,-,-,-,-,-,-,-,-,-,7,2025
+Dinsdag,2025-02-11,-,-,-,-,-,-,-,-,-,-,-,-,7,2025
+Woensdag,2025-02-12,-,-,-,-,-,-,-,-,-,-,-,-,7,2025
+Donderdag,2025-02-13,-,-,-,-,-,-,-,-,-,-,-,-,7,2025
+Vrijdag,2025-02-14,-,-,-,-,-,-,-,-,-,-,-,-,7,2025
+Maandag,2025-02-17,-,-,-,-,-,-,-,-,-,-,-,-,8,2025
+Dinsdag,2025-02-18,-,-,-,-,-,-,-,-,-,-,-,-,8,2025
+Woensdag,2025-02-19,-,-,-,-,-,-,-,-,-,-,-,-,8,2025
+Donderdag,2025-02-20,-,-,-,-,-,-,-,-,-,-,-,-,8,2025
+Vrijdag,2025-02-21,-,-,-,-,-,-,-,-,-,-,-,-,8,2025
+Maandag,2025-02-24,-,-,-,-,-,-,-,-,-,-,-,-,9,2025
+Dinsdag,2025-02-25,-,-,-,-,-,-,-,-,-,-,-,-,9,2025
+Woensdag,2025-02-26,-,-,-,-,-,-,-,-,-,-,-,-,9,2025
+Donderdag,2025-02-27,-,-,-,-,-,-,-,-,-,-,-,-,9,2025
+Vrijdag,2025-02-28,-,-,-,-,-,-,-,-,-,-,-,-,9,2025
+Maandag,2025-03-03,-,-,-,-,-,-,-,-,-,-,-,-,10,2025
+Dinsdag,2025-03-04,-,-,-,-,-,-,-,-,-,-,-,-,10,2025
+Woensdag,2025-03-05,-,-,-,-,-,-,-,-,-,-,-,-,10,2025
+Donderdag,2025-03-06,-,-,-,-,-,-,-,-,-,-,-,-,10,2025
+Vrijdag,2025-03-07,-,-,-,-,-,-,-,-,-,-,-,-,10,2025
+Maandag,2025-03-10,-,-,-,-,-,-,-,-,-,-,-,-,11,2025
+Dinsdag,2025-03-11,-,-,-,-,-,-,-,-,-,-,-,-,11,2025
+Woensdag,2025-03-12,-,-,-,-,-,-,-,-,-,-,-,-,11,2025
+Donderdag,2025-03-13,-,-,-,-,-,-,-,-,-,-,-,-,11,2025
+Vrijdag,2025-03-14,-,-,-,-,-,-,-,-,-,-,-,-,11,2025
+Maandag,2025-03-17,-,-,-,-,-,-,-,-,-,-,-,-,12,2025
+Dinsdag,2025-03-18,-,-,-,-,-,-,-,-,-,-,-,-,12,2025
+Woensdag,2025-03-19,-,-,-,-,-,-,-,-,-,-,-,-,12,2025
+Donderdag,2025-03-20,-,-,-,-,-,-,-,-,-,-,-,-,12,2025
+Vrijdag,2025-03-21,-,-,-,-,-,-,-,-,-,-,-,-,12,2025
+Maandag,2025-03-24,-,-,-,-,-,-,-,-,-,-,-,-,13,2025
+Dinsdag,2025-03-25,-,-,-,-,-,-,-,-,-,-,-,-,13,2025
+Woensdag,2025-03-26,-,-,-,-,-,-,-,-,-,-,-,-,13,2025
+Donderdag,2025-03-27,-,-,-,-,-,-,-,-,-,-,-,-,13,2025
+Vrijdag,2025-03-28,-,-,-,-,-,-,-,-,-,-,-,-,13,2025
+Maandag,2025-03-31,-,-,-,-,-,-,-,-,-,-,-,-,14,2025
+Dinsdag,2025-04-01,-,-,-,-,-,-,-,-,-,-,-,-,14,2025
+Woensdag,2025-04-02,-,-,-,-,-,-,-,-,-,-,-,-,14,2025
+Donderdag,2025-04-03,-,-,-,-,-,-,-,-,-,-,-,-,14,2025
+Vrijdag,2025-04-04,-,-,-,-,-,-,-,-,-,-,-,-,14,2025
+Maandag,2025-04-07,-,-,-,-,-,-,-,-,-,-,-,-,15,2025
+Dinsdag,2025-04-08,-,-,-,-,-,-,-,-,-,-,-,-,15,2025
+Woensdag,2025-04-09,-,-,-,-,-,-,-,-,-,-,-,-,15,2025
+Donderdag,2025-04-10,-,-,-,-,-,-,-,-,-,-,-,-,15,2025
+Vrijdag,2025-04-11,-,-,-,-,-,-,-,-,-,-,-,-,15,2025
+Maandag,2025-04-14,-,-,-,-,-,-,-,-,-,-,-,-,16,2025
+Dinsdag,2025-04-15,-,-,-,-,-,-,-,-,-,-,-,-,16,2025
+Woensdag,2025-04-16,-,-,-,-,-,-,-,-,-,-,-,-,16,2025
+Donderdag,2025-04-17,-,-,-,-,-,-,-,-,-,-,-,-,16,2025
+Vrijdag,2025-04-18,-,-,-,-,-,-,-,-,-,-,-,-,16,2025
+Maandag,2025-04-21,-,-,-,-,-,-,-,-,-,-,-,-,17,2025
+Dinsdag,2025-04-22,-,-,-,-,-,-,-,-,-,-,-,-,17,2025
+Woensdag,2025-04-23,-,-,-,-,-,-,-,-,-,-,-,-,17,2025
+Donderdag,2025-04-24,-,-,-,-,-,-,-,-,-,-,-,-,17,2025
+Vrijdag,2025-04-25,-,-,-,-,-,-,-,-,-,-,-,-,17,2025
+Maandag,2025-04-28,-,-,-,-,-,-,-,-,-,-,-,-,18,2025
+Dinsdag,2025-04-29,-,-,-,-,-,-,-,-,-,-,-,-,18,2025
+Woensdag,2025-04-30,-,-,-,-,-,-,-,-,-,-,-,-,18,2025
+Donderdag,2025-05-01,-,-,-,-,-,-,-,-,-,-,-,-,18,2025
+Vrijdag,2025-05-02,-,-,-,-,-,-,-,-,-,-,-,-,18,2025
