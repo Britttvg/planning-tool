@@ -188,9 +188,11 @@ def show_excel(data_url, ical_file):
 
     # Group by week (year currently not used)
     weeks = saved_data.groupby(["Jaar", "Week"])
+    # Sort by year and week to display them in chronological order
+    sorted_weeks = sorted(weeks, key=lambda x: (x[0], x[1]))
 
-    for (year, week), group in weeks:
-        if week >= datetime.datetime.now().isocalendar().week and not week == 1:
+    for (year, week), group in sorted_weeks:
+        if week >= datetime.datetime.now().isocalendar().week or (year >= datetime.datetime.now().isocalendar().year and week <= datetime.datetime.now().isocalendar().week):
             # Display a subheader for each week
             st.subheader(f"Week {week}")
 
@@ -201,99 +203,13 @@ def show_excel(data_url, ical_file):
             relevant_columns = group.columns.difference(["Dag", "Datum"])
 
             # Track each week separately in session state
-            week_key = f"week_{week}"
+            week_key = f"week_{week}_{year}"
 
             if week_key not in st.session_state:
                 st.session_state[week_key] = group.copy()
 
             # Create a toggle for view mode
-            view_key = f"view_{week}"
-            if view_key not in st.session_state:
-                st.session_state[view_key] = False  # Default is editable mode
-
-            # Toggle button to switch between views
-            st.toggle(
-                label=":art:",
-                value=st.session_state[view_key],
-                key=f"toggle_{week}",
-                on_change=toggle_view_state,
-                args=(view_key, week_key, group),
-            )
-
-            for index, row in group.iterrows():
-                day = row["Dag"]  # Assuming 'Dag' column contains the day of the week
-                if day not in occurrences_per_day:
-                    occurrences_per_day[day] = 0  # Initialize count for the day
-
-                # Check each relevant column for occurrences of 'Apeldoorn'
-                for col in relevant_columns:
-                    if "Apeldoorn" in str(row[col]) or "apeldoorn" in str(row[col]):
-                        occurrences_per_day[day] += 1  # Increment count if found
-
-            # Prepare the output string to display counts in a single line
-            occurrences_str = " | ".join(
-                f"**{day_abbreviations.get(day, day)} :{'red' if count == 0 else 'green'}[{count}]**"
-                for day, count in occurrences_per_day.items()
-            )
-
-            # Display the counts in a single line
-            st.write(f"**Apeldoorn** | {occurrences_str} |")
-            # Display based on the current view mode
-            if st.session_state[view_key]:
-
-                # View mode: Display with color styling for 'Apeldoorn'
-                styled_data = group.copy().astype(
-                    str
-                )  # Ensure all data is string for replacement
-                styled_data["Datum"] = pd.to_datetime(
-                    styled_data["Datum"], format="%Y-%m-%d", errors="coerce"
-                )
-                # Format the dates to "DD-MM-YYYY", leave other values unchanged
-                styled_data["Datum"] = (
-                    styled_data["Datum"].dt.strftime("%d-%m-%Y").fillna(group["Datum"])
-                )
-                styled_data = styled_data.map(highlight_apeldoorn)
-
-                # Render the DataFrame as HTML using st.write()
-                st.write(
-                    styled_data.to_html(escape=False, index=False),
-                    unsafe_allow_html=True,
-                )
-
-            else:
-                data_editor2 = st.data_editor(
-                    st.session_state[
-                        week_key
-                    ],  # Use the session state version of the group
-                    hide_index=True,  # Hide the index column
-                    key=f"data_editor_dev_{week}_{year}",  # Unique key for each editor
-                    column_config=column_config,  # Disable editing for 'Datum'
-                )
-
-                data_editor2 = data_editor2.fillna("-")
-
-                # If data is changed, update the CSV file
-                if not data_editor2.equals(st.session_state[week_key]):
-                    # Call update_csv to save the changes for the specific week using the unique name
-                    update_csv(data_editor2, week, data_url)
-        else:
-            # Display a subheader for each week
-            st.subheader(f"Week {week}")
-
-            # Count occurrences of 'Apeldoorn' per day of the week for all relevant columns
-            occurrences_per_day = {}
-
-            # Get all columns except 'Dag' and 'Datum'
-            relevant_columns = group.columns.difference(["Dag", "Datum"])
-
-            # Track each week separately in session state
-            week_key = f"week_{week}"
-
-            if week_key not in st.session_state:
-                st.session_state[week_key] = group.copy()
-
-            # Create a toggle for view mode
-            view_key = f"view_{week}"
+            view_key = f"view_{week}_{year}"
             if view_key not in st.session_state:
                 st.session_state[view_key] = False  # Default is editable mode
 
@@ -324,9 +240,9 @@ def show_excel(data_url, ical_file):
 
             # Display the counts in a single line
             st.write(f"**Apeldoorn** | {occurrences_str} |")
+            
             # Display based on the current view mode
             if st.session_state[view_key]:
-
                 # View mode: Display with color styling for 'Apeldoorn'
                 styled_data = group.copy().astype(
                     str
@@ -362,5 +278,6 @@ def show_excel(data_url, ical_file):
                 if not data_editor2.equals(st.session_state[week_key]):
                     # Call update_csv to save the changes for the specific week using the unique name
                     update_csv(data_editor2, week, data_url)
+           
     # Call the download function after processing all weeks in `show_excel`
     download_all_weeks_csv(data_url)
