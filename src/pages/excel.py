@@ -29,7 +29,7 @@ column_config = {
 push_timer = None
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 # Concatenate data from all weeks into a single DataFrame and offer a download button
 def download_all_weeks_csv(data_url):
