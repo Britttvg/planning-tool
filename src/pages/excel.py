@@ -101,9 +101,9 @@ def update_csv(edited_data, week, data_url):
         commit_and_push_changes(data_url, week)
         
         # Restart the push timer to push changes every 5 minutes (300 seconds)
-        # start_push_timer(data_url, week, interval=300)
+        start_push_timer(data_url, week, interval=30)
         
-        st.success(f"Data saved for week {week}.")
+        # st.success(f"Data saved for week {week}.")
     except Exception as e:
         st.warning(f"Error saving data: {e}")
 
