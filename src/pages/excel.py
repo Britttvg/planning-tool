@@ -4,6 +4,7 @@ import datetime
 import git
 import os
 import threading
+from dotenv import load_dotenv
 
 
 # Mapping for full day names to abbreviations
@@ -28,8 +29,10 @@ column_config = {
 # Global timer reference
 push_timer = None
 
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+
 # Load environment variables from .env file
-# load_dotenv()
+load_dotenv()
 
 # Concatenate data from all weeks into a single DataFrame and offer a download button
 def download_all_weeks_csv(data_url):
@@ -57,7 +60,6 @@ def download_all_weeks_csv(data_url):
 def commit_and_push_changes(data_url, week):
     """Function to commit and push changes to GitHub."""
     try:
-        GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
         repo = git.Repo()
         repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
         repo.git.checkout('main')
