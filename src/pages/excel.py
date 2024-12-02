@@ -54,6 +54,8 @@ def download_all_weeks_csv(data_url):
 def commit_and_push_changes(data_url, week):
     """Function to commit and push changes to GitHub."""
     try:
+        GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+        repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
         repo = git.Repo()
         repo.git.checkout('main')
         repo.remotes.origin.pull()
