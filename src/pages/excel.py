@@ -3,6 +3,7 @@ import pandas as pd
 import datetime
 import git
 import os
+import threading
 
 
 # Mapping for full day names to abbreviations
@@ -16,7 +17,6 @@ day_abbreviations = {
     "Zondag": "Zo",
 }
 
-
 column_config = {
     "Dag": st.column_config.TextColumn(disabled=True),
     "Datum": st.column_config.DateColumn(disabled=True, format="DD-MM-YYYY"),
@@ -25,6 +25,8 @@ column_config = {
     # All other columns can remain editable, so no need to specify them here
 }
 
+# Global timer reference
+push_timer = None
 
 # Concatenate data from all weeks into a single DataFrame and offer a download button
 def download_all_weeks_csv(data_url):
@@ -49,15 +51,37 @@ def download_all_weeks_csv(data_url):
         mime="text/csv",
     )
 
-
-def update_csv(edited_data, week, data_url):
-    """Function to update the CSV file with the edited data."""
+def commit_and_push_changes(data_url, week):
+    """Function to commit and push changes to GitHub."""
     try:
         repo = git.Repo()
         repo.git.checkout('main')
         repo.remotes.origin.pull()
-        
-        # Load the original CSV file from the local repository
+
+        # Add, commit, and push the changes to the repository
+        repo.git.add(data_url)
+        repo.index.commit(f'Update CSV {data_url}, week {week}, time {datetime.datetime.now()}')
+        repo.remotes.origin.push()
+
+        st.success(f"Data saved and pushed for week {week}.")
+    except Exception as e:
+        st.warning(f"Error saving data: {e}")
+
+def start_push_timer(data_url, week, interval=300):
+    """Function to start a timer that commits and pushes changes after `interval` seconds."""
+    global push_timer
+    
+    # If there's an existing timer, cancel it
+    if push_timer is not None:
+        push_timer.cancel()
+
+    # Start a new timer, but it will only call the commit_and_push_changes after the specified interval
+    push_timer = threading.Timer(interval, commit_and_push_changes, [data_url, week])
+    push_timer.start()
+    
+def update_csv(edited_data, week, data_url):
+    """Function to update the CSV file with the edited data."""
+    try:
         original_data = pd.read_csv(data_url)
         
         original_data['Datum'] = pd.to_datetime(original_data['Datum']).dt.date.astype(str)
@@ -69,10 +93,8 @@ def update_csv(edited_data, week, data_url):
         # Save the concatenated DataFrame back to the CSV file
         original_data.to_csv(data_url, index=False)
         
-        # Add, commit, and push the changes to the repository
-        repo.git.add(data_url)
-        repo.index.commit(f'Update CSV file {data_url} for week {week}')
-        repo.remotes.origin.push()
+        # Restart the push timer to push changes every 5 minutes (300 seconds)
+        start_push_timer(data_url, week, interval=300)
         
         st.success(f"Data saved for week {week}.")
     except Exception as e:
@@ -245,7 +267,6 @@ def show_excel(data_url, ical_file):
 
                 # If data is changed, update the CSV file
                 if not data_editor2.equals(st.session_state[week_key]):
-                    print('saved ', saved_data)
                     # Call update_csv to save the changes for the specific week using the unique name
                     update_csv(data_editor2, week, data_url)
     # Call the download function after processing all weeks in `show_excel`
