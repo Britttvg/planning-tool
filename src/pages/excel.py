@@ -69,15 +69,13 @@ def commit_and_push_changes(data_url, week):
 
 def start_push_timer(data_url, week, interval=300):
     """Function to start a timer that commits and pushes changes after `interval` seconds."""
-    global push_timer
-    
-    # If there's an existing timer, cancel it
-    if push_timer is not None:
-        push_timer.cancel()
-
-    # Start a new timer, but it will only call the commit_and_push_changes after the specified interval
-    push_timer = threading.Timer(interval, commit_and_push_changes, [data_url, week])
-    push_timer.start()
+    # If the timer is already running, don't start it again
+    if "timer_started" not in st.session_state or not st.session_state.timer_started:
+        st.session_state.timer_started = True
+        threading.Timer(interval, commit_and_push_changes, [data_url, week]).start()
+        st.info(f"Timer started. The commit will be pushed in {interval} seconds.")
+    else:
+        st.warning("Timer is already running. It will not be restarted.")
     
 def update_csv(edited_data, week, data_url):
     """Function to update the CSV file with the edited data."""
