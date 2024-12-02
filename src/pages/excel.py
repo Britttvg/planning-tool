@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import datetime
+import git
+import os
 
 
 # Mapping for full day names to abbreviations
@@ -48,14 +50,30 @@ def download_all_weeks_csv(data_url):
     )
 
 
-def update_csv(edited_data, original_data, week, data_url):
+def update_csv(edited_data, week, data_url):
     """Function to update the CSV file with the edited data."""
     try:
+        repo = git.Repo()
+        repo.git.checkout('main')
+        repo.remotes.origin.pull()
+        
+        # Load the original CSV file from the local repository
+        original_data = pd.read_csv(data_url)
+        
+        original_data['Datum'] = pd.to_datetime(original_data['Datum']).dt.date.astype(str)
+        edited_data['Datum'] = pd.to_datetime(edited_data['Datum']).dt.date.astype(str)
+        
         # Overwrite the relevant rows in the original_data with the edited group
         original_data.update(edited_data)
 
         # Save the concatenated DataFrame back to the CSV file
         original_data.to_csv(data_url, index=False)
+        
+        # Add, commit, and push the changes to the repository
+        repo.git.add(data_url)
+        repo.index.commit(f'Update CSV file {data_url} for week {week}')
+        repo.remotes.origin.push()
+        
         st.success(f"Data saved for week {week}.")
     except Exception as e:
         st.warning(f"Error saving data: {e}")
@@ -227,8 +245,8 @@ def show_excel(data_url, ical_file):
 
                 # If data is changed, update the CSV file
                 if not data_editor2.equals(st.session_state[week_key]):
-
+                    print('saved ', saved_data)
                     # Call update_csv to save the changes for the specific week using the unique name
-                    update_csv(data_editor2, saved_data, week, data_url)
+                    update_csv(data_editor2, week, data_url)
     # Call the download function after processing all weeks in `show_excel`
     download_all_weeks_csv(data_url)

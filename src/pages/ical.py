@@ -16,7 +16,7 @@ def create_ical(data_url):
         for person in data_planning.columns:
             if (
                 row[person] != "-"
-                and row[person] != None
+                and row[person] is not None
                 and person not in ["Datum", "Dag", "Week", "Jaar"]
             ):
                 event = Event()
