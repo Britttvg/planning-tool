@@ -266,7 +266,7 @@ def show_excel(data_url, ical_file):
                         week_key
                     ],  # Use the session state version of the group
                     hide_index=True,  # Hide the index column
-                    key=f"data_editor_dev_{week}",  # Unique key for each editor
+                    key=f"data_editor_dev_{week}_{year}",  # Unique key for each editor
                     column_config=column_config,  # Disable editing for 'Datum'
                 )
 
@@ -276,8 +276,8 @@ def show_excel(data_url, ical_file):
                 if not data_editor2.equals(st.session_state[week_key]):
                     # Call update_csv to save the changes for the specific week using the unique name
                     update_csv(data_editor2, week, data_url)
-        elif not week == 1:
-             # Display a subheader for each week
+        else:
+            # Display a subheader for each week
             st.subheader(f"Week {week}")
 
             # Count occurrences of 'Apeldoorn' per day of the week for all relevant columns
@@ -301,7 +301,7 @@ def show_excel(data_url, ical_file):
             st.toggle(
                 label=":art:",
                 value=st.session_state[view_key],
-                key=f"toggle_{week}",
+                key=f"toggle_{week}_{year}",
                 on_change=toggle_view_state,
                 args=(view_key, week_key, group),
             )
@@ -352,7 +352,7 @@ def show_excel(data_url, ical_file):
                         week_key
                     ],  # Use the session state version of the group
                     hide_index=True,  # Hide the index column
-                    key=f"data_editor_dev_{week}",  # Unique key for each editor
+                    key=f"data_editor_dev_{week}_{year}",  # Unique key for each editor
                     column_config=column_config,  # Disable editing for 'Datum'
                 )
 
