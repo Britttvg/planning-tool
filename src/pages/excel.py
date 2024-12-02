@@ -189,8 +189,8 @@ def show_excel(data_url, ical_file):
     # Group by week (year currently not used)
     weeks = saved_data.groupby(["Jaar", "Week"])
 
-    for (_, week), group in weeks:
-        if week >= datetime.datetime.now().isocalendar().week:
+    for (year, week), group in weeks:
+        if week >= datetime.datetime.now().isocalendar().week or year >= datetime.datetime.now().year:
             # Display a subheader for each week
             st.subheader(f"Week {week}")
 
