@@ -28,6 +28,9 @@ column_config = {
 # Global timer reference
 push_timer = None
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Concatenate data from all weeks into a single DataFrame and offer a download button
 def download_all_weeks_csv(data_url):
     """Function to concatenate all weeks' data into a single CSV for download."""
@@ -55,8 +58,8 @@ def commit_and_push_changes(data_url, week):
     """Function to commit and push changes to GitHub."""
     try:
         GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-        repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
         repo = git.Repo()
+        repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
         repo.git.checkout('main')
         repo.remotes.origin.pull()
 
