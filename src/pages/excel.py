@@ -91,8 +91,10 @@ def update_csv(edited_data, week, data_url):
         # Save the concatenated DataFrame back to the CSV file
         original_data.to_csv(data_url, index=False)
         
+        commit_and_push_changes(data_url, week)
+        
         # Restart the push timer to push changes every 5 minutes (300 seconds)
-        start_push_timer(data_url, week, interval=300)
+        # start_push_timer(data_url, week, interval=300)
         
         st.success(f"Data saved for week {week}.")
     except Exception as e:
