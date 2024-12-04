@@ -115,9 +115,17 @@ if not check_password():
 #########################
     
 # Display a custom-styled button
-
+st.markdown("""
+    <style>.element-container:has(#button-after) + div button {
+    position: fixed;
+    right: 0;
+    top: 100;
+    border: 1px solid red;
+    background-color: #fff;
+    }</style>""", unsafe_allow_html=True)
     
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
+    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
     if st.button(':bangbang: Push to Git'):
         commit_and_push_changes("src/data/data_planning_dev.csv")
     st.title(f":blue[Dev]")
@@ -126,6 +134,7 @@ if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
 
         
 if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
+    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
     if st.button(':bangbang: Push to Git'):
         commit_and_push_changes("src/data/data_planning_support.csv")
     st.title(f":orange[Support - Exposure]")
