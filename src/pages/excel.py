@@ -1,11 +1,7 @@
 import streamlit as st
 import pandas as pd
 import datetime
-import git
-import os
 import threading
-from dotenv import load_dotenv
-
 
 # Mapping for full day names to abbreviations
 day_abbreviations = {
@@ -26,14 +22,6 @@ column_config = {
     # All other columns can remain editable, so no need to specify them here
 }
 
-# Global timer reference
-push_timer = None
-
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-
-# Load environment variables from .env file
-load_dotenv()
-
 # Concatenate data from all weeks into a single DataFrame and offer a download button
 def download_all_weeks_csv(data_url):
     """Function to concatenate all weeks' data into a single CSV for download."""
@@ -48,6 +36,7 @@ def download_all_weeks_csv(data_url):
     csv_data = all_data.to_csv(index=False).encode("utf-8")
 
     base_name = data_url.split("/")[-1].split(".")[0]
+    
     # Download button for the entire data CSV
     st.download_button(
         label="Download alle data (CSV)",
@@ -56,33 +45,6 @@ def download_all_weeks_csv(data_url):
         file_name=f"all_weeks_{base_name}.csv",
         mime="text/csv",
     )
-
-def commit_and_push_changes(data_url, week):
-    """Function to commit and push changes to GitHub."""
-    try:
-        repo = git.Repo()
-        repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
-        repo.git.checkout('main')
-        repo.remotes.origin.pull()
-
-        # Add, commit, and push the changes to the repository
-        repo.git.add(data_url)
-        repo.index.commit(f'Update CSV {data_url}, week {week}, time {datetime.datetime.now()}')
-        repo.remotes.origin.push()
-
-        st.success(f"Data saved and pushed for week {week}.")
-    except Exception as e:
-        st.warning(f"Error saving data: {e}")
-
-def start_push_timer(data_url, week, interval=300):
-    """Function to start a timer that commits and pushes changes after `interval` seconds."""
-    # If the timer is already running, don't start it again
-    if "timer_started" not in st.session_state or not st.session_state.timer_started:
-        st.session_state.timer_started = True
-        threading.Timer(interval, commit_and_push_changes, [data_url, week]).start()
-        st.info(f"Timer started. The commit will be pushed in {interval} seconds.")
-    else:
-        st.warning("Timer is already running. It will not be restarted.")
     
 def update_csv(edited_data, week, data_url):
     """Function to update the CSV file with the edited data."""
@@ -98,23 +60,9 @@ def update_csv(edited_data, week, data_url):
         # Save the concatenated DataFrame back to the CSV file
         original_data.to_csv(data_url, index=False)
         
-        commit_and_push_changes(data_url, week)
-        
-        # Restart the push timer to push changes every 5 minutes (300 seconds)
-        # start_push_timer(data_url, week, interval=300)
-        
-        # st.success(f"Data saved for week {week}.")
+        st.success(f"Data locally saved for week {week}.")
     except Exception as e:
         st.warning(f"Error saving data: {e}")
-
-
-# def drop_rows(data_url, data, indices):
-#     """Function to drop rows that are from past weeks and save the updated data."""
-#     new_week_data = data.drop(indices, axis=0)
-#     data.reset_index(drop=True, inplace=True)
-#     new_week_data.to_csv(data_url, index=False)
-#     st.rerun()
-#     return new_week_data
 
 
 def reset_session_state_week():
@@ -175,16 +123,6 @@ def show_excel(data_url, ical_file):
     # Extract week number and year
     saved_data["Week"] = saved_data["Datum"].dt.isocalendar().week
     saved_data["Jaar"] = saved_data["Datum"].dt.year.astype(int)
-
-    # Identify the indices of rows to drop (where week number < current week)
-    # if (saved_data["Week"] < datetime.datetime.now().isocalendar().week).any():
-    #     saved_data = drop_rows(
-    #         data_url,
-    #         saved_data.iloc[1:],  # Skip the headers
-    #         saved_data.iloc[1:][
-    #             saved_data["Week"] < datetime.datetime.now().isocalendar().week
-    #         ].index,
-    #     )
 
     # Group by week (year currently not used)
     weeks = saved_data.groupby(["Jaar", "Week"])

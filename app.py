@@ -3,6 +3,10 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from datetime import datetime
 import hmac
+import os
+import git
+from dotenv import load_dotenv
+import time
 
 st.set_page_config(page_title="Planning tool", page_icon=":calendar:", layout="wide")
 
@@ -40,6 +44,31 @@ with open("src/style/style.css", encoding="utf-8") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+
+# Load environment variables from .env file
+load_dotenv()
+
+def commit_and_push_changes(data_url):
+    """Function to commit and push changes to GitHub."""
+    success_placeholder = st.empty()
+    success_placeholder.empty()  # Clear the message
+    try:
+        repo = git.Repo()
+        repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
+        repo.git.checkout('main')
+        repo.remotes.origin.pull()
+
+        # Add, commit, and push the changes to the repository
+        repo.git.add(data_url)
+        repo.index.commit(f'Update CSV {data_url}, time {datetime.now()}')
+        repo.remotes.origin.push()
+
+        # Temporary success message
+        success_placeholder.success(f"Data {data_url} saved and pushed to git.")
+    except Exception as e:
+        st.warning(f"Error saving data: {e}")
+        
 def check_password():
     """Returns `True` if the user had the correct password."""
 
@@ -62,6 +91,7 @@ def check_password():
         on_change=password_entered,
         key="password",
     )
+    
     # Use Markdown with HTML to style text as a button
     button_html = """
     <button class="submit_button">
@@ -83,13 +113,21 @@ if not check_password():
 #########################
 ######### PAGES #########
 #########################
+    
+# Display a custom-styled button
 
+    
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
+    if st.button(':bangbang: Push to Git'):
+        commit_and_push_changes("src/data/data_planning_dev.csv")
     st.title(f":blue[Dev]")
     ical_file = ical.create_ical("src/data/data_planning_dev.csv")
     excel.show_excel("src/data/data_planning_dev.csv", ical_file)
 
+        
 if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
+    if st.button(':bangbang: Push to Git'):
+        commit_and_push_changes("src/data/data_planning_support.csv")
     st.title(f":orange[Support - Exposure]")
     ical_file = ical.create_ical("src/data/data_planning_support.csv")
     excel.show_excel("src/data/data_planning_support.csv", ical_file)
