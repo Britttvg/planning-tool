@@ -130,7 +130,7 @@ def show_excel(data_url, ical_file):
     sorted_weeks = sorted(weeks, key=lambda x: (x[0], x[1]))
 
     for (year, week), group in sorted_weeks:
-        if week >= datetime.datetime.now().isocalendar().week or (year >= datetime.datetime.now().isocalendar().year and week <= datetime.datetime.now().isocalendar().week):
+        if week >= datetime.datetime.now().isocalendar().week or (year > datetime.datetime.now().isocalendar().year and week <= datetime.datetime.now().isocalendar().week):
             # Display a subheader for each week
             st.subheader(f"Week {week}")
 
