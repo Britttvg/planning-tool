@@ -18,9 +18,11 @@ with st.sidebar:
         [
             f"Week {datetime.today().isocalendar()[1]} - Dev",
             f"Week {datetime.today().isocalendar()[1]} - Support - Exposure",
+            f"Week {datetime.today().isocalendar()[1]} - Q Dev",
         ],
         # Icons from https://icons.getbootstrap.com
         icons=[
+            "file-earmark-spreadsheet",
             "file-earmark-spreadsheet",
             "file-earmark-spreadsheet",
         ],
@@ -140,3 +142,11 @@ if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
     st.title(f":orange[Support - Exposure]")
     ical_file = ical.create_ical("src/data/data_planning_support.csv")
     excel.show_excel("src/data/data_planning_support.csv", ical_file)
+
+if choice == f"Week {datetime.today().isocalendar()[1]} - Q Dev":
+    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
+    if st.button(':bangbang: Push to Git'):
+        commit_and_push_changes("src/data/data_planning_q_dev.csv")
+    st.title(f":green[Q Dev]")
+    ical_file = ical.create_ical("src/data/data_planning_q_dev.csv")
+    excel.show_excel("src/data/data_planning_q_dev.csv", ical_file)
