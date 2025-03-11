@@ -19,45 +19,45 @@ Dinsdag,2025-03-04,Thuis,Thuis,-,-,-,-,10,2025
 Woensdag,2025-03-05,Apeldoorn,Revalidatie,-,-,-,-,10,2025
 Donderdag,2025-03-06,Apeldoorn,HUB50 (UX Vakdag),-,-,-,-,10,2025
 Vrijdag,2025-03-07,Vrij,Thuis,Apeldoorn,-,-,-,10,2025
-Maandag,2025-03-10,Thuis,Revalidatie,Vrij,-,-,-,11,2025
-Dinsdag,2025-03-11,Thuis,Thuis,Thuis,-,-,-,11,2025
-Woensdag,2025-03-12,Apeldoorn,Revalidatie,Apeldoorn,-,-,-,11,2025
-Donderdag,2025-03-13,Apeldoorn (ZeBra komt langs),Apeldoorn,Apeldoorn,-,-,-,11,2025
-Vrijdag,2025-03-14,Vrij,Thuis,Apeldoorn,-,-,-,11,2025
-Maandag,2025-03-17,Utrecht (TROI Store),Revalidatie,Vrij,-,-,-,12,2025
-Dinsdag,2025-03-18,Apeldoorn (DTT),Thuis,Apeldoorn,-,-,-,12,2025
-Woensdag,2025-03-19,Apeldoorn (DTT),Revalidatie,Apeldoorn,-,-,-,12,2025
-Donderdag,2025-03-20,Apeldoorn/TROI-Store?,Apeldoorn,Apeldoorn,-,-,-,12,2025
+Maandag,2025-03-10,Thuis,Revalidatie,Vrij,-,Thuis,-,11,2025
+Dinsdag,2025-03-11,Thuis,Thuis,Thuis,-,Thuis,-,11,2025
+Woensdag,2025-03-12,Apeldoorn,Revalidatie,Apeldoorn,-,Heerlen,-,11,2025
+Donderdag,2025-03-13,Apeldoorn (ZeBra komt langs),Apeldoorn,Apeldoorn,-,Apeldoorn,-,11,2025
+Vrijdag,2025-03-14,Vrij,Thuis,Apeldoorn,-,Vrij,-,11,2025
+Maandag,2025-03-17,Utrecht (TROI Store),Revalidatie,Vrij,-,Thuis,-,12,2025
+Dinsdag,2025-03-18,Apeldoorn (DTT),Thuis,Apeldoorn,-,Apeldoorn,-,12,2025
+Woensdag,2025-03-19,Apeldoorn (DTT),Revalidatie,Apeldoorn,-,Apeldoorn,-,12,2025
+Donderdag,2025-03-20,Apeldoorn/TROI-Store?,Apeldoorn,Apeldoorn,-,Apeldoorn,-,12,2025
 Vrijdag,2025-03-21,Vrij,Thuis,Apeldoorn,-,-,-,12,2025
-Maandag,2025-03-24,Apeldoorn (DTT),Revalidatie,Warnsveld (ochtend),-,-,-,13,2025
-Dinsdag,2025-03-25,DEX-XL,Thuis,DEX-XL,-,-,-,13,2025
-Woensdag,2025-03-26,DEX-XL,Revalidatie,DEX-XL,-,-,-,13,2025
-Donderdag,2025-03-27,Apeldoorn,Apeldoorn,Apeldoorn,-,-,-,13,2025
+Maandag,2025-03-24,Apeldoorn (DTT),Revalidatie,Warnsveld (ochtend),-,Thuis,-,13,2025
+Dinsdag,2025-03-25,DEX-XL,Thuis,DEX-XL,-,Apeldoorn,-,13,2025
+Woensdag,2025-03-26,DEX-XL,Revalidatie,DEX-XL,-,Apeldoorn,-,13,2025
+Donderdag,2025-03-27,Apeldoorn,Apeldoorn,Apeldoorn,-,Apeldoorn,-,13,2025
 Vrijdag,2025-03-28,Vrij,Thuis,Onbekend,-,-,-,13,2025
-Maandag,2025-03-31,Thuis,Revalidatie,-,-,-,-,14,2025
-Dinsdag,2025-04-01,Thuis,Thuis,-,-,-,-,14,2025
-Woensdag,2025-04-02,Apeldoorn,Revalidatie,-,-,-,-,14,2025
-Donderdag,2025-04-03,Apeldoorn,Apeldoorn,-,-,-,-,14,2025
+Maandag,2025-03-31,Thuis,Revalidatie,-,-,Thuis,-,14,2025
+Dinsdag,2025-04-01,Thuis,Thuis,-,-,Apeldoorn,-,14,2025
+Woensdag,2025-04-02,Apeldoorn,Revalidatie,-,-,Apeldoorn,-,14,2025
+Donderdag,2025-04-03,Apeldoorn,Apeldoorn,-,-,Apeldoorn,-,14,2025
 Vrijdag,2025-04-04,Vrij,Thuis,-,-,-,-,14,2025
-Maandag,2025-04-07,Funweek Soesterberg,Revalidatie,-,-,-,-,15,2025
-Dinsdag,2025-04-08,Funweek,Thuis,-,-,-,-,15,2025
-Woensdag,2025-04-09,Funweek,Revalidatie,-,-,-,-,15,2025
-Donderdag,2025-04-10,NIK-themadag Ede,HUB50,-,-,-,-,15,2025
+Maandag,2025-04-07,Funweek Soesterberg,Revalidatie,-,-,Thuis,-,15,2025
+Dinsdag,2025-04-08,Funweek,Thuis,-,-,Apeldoorn,-,15,2025
+Woensdag,2025-04-09,Funweek,Revalidatie,-,-,Apeldoorn,-,15,2025
+Donderdag,2025-04-10,NIK-themadag Ede,HUB50,-,-,Apeldoorn,-,15,2025
 Vrijdag,2025-04-11,Funweek,Thuis,-,-,-,-,15,2025
-Maandag,2025-04-14,Funweek HUB50,Revalidatie,-,-,-,-,16,2025
-Dinsdag,2025-04-15,Thuis,Thuis,-,-,-,-,16,2025
-Woensdag,2025-04-16,Apeldoorn,Revalidatie,-,-,-,-,16,2025
-Donderdag,2025-04-17,Apeldoorn,Amsterdam (TROI Designer Dag),-,-,-,-,16,2025
+Maandag,2025-04-14,Funweek HUB50,Revalidatie,-,-,Thuis,-,16,2025
+Dinsdag,2025-04-15,Thuis,Thuis,-,-,Apeldoorn,-,16,2025
+Woensdag,2025-04-16,Apeldoorn,Revalidatie,-,-,Apeldoorn,-,16,2025
+Donderdag,2025-04-17,Apeldoorn,Amsterdam (TROI Designer Dag),-,-,Apeldoorn,-,16,2025
 Vrijdag,2025-04-18,Vrij,Thuis,-,-,-,-,16,2025
-Maandag,2025-04-21,Feestdag,Feestdag,-,-,-,-,17,2025
-Dinsdag,2025-04-22,TROI-Store?,Vrij,-,-,-,-,17,2025
-Woensdag,2025-04-23,TROI-Store?,Vrij,-,-,-,-,17,2025
-Donderdag,2025-04-24,TROI-Store?,Vrij,-,-,-,-,17,2025
+Maandag,2025-04-21,Feestdag,Feestdag,-,-,Thuis,-,17,2025
+Dinsdag,2025-04-22,TROI-Store?,Vrij,-,-,Apeldoorn,-,17,2025
+Woensdag,2025-04-23,TROI-Store?,Vrij,-,-,Apeldoorn,-,17,2025
+Donderdag,2025-04-24,TROI-Store?,Vrij,-,-,Apeldoorn,-,17,2025
 Vrijdag,2025-04-25,TROI-Store?,Vrij,-,-,-,-,17,2025
-Maandag,2025-04-28,Thuis,Vrij,-,-,-,-,18,2025
-Dinsdag,2025-04-29,Thuis,Vrij,-,-,-,-,18,2025
-Woensdag,2025-04-30,Apeldoorn,Vrij,-,-,-,-,18,2025
-Donderdag,2025-05-01,Apeldoorn,Vrij,-,-,-,-,18,2025
+Maandag,2025-04-28,Thuis,Vrij,-,-,Vrij,-,18,2025
+Dinsdag,2025-04-29,Thuis,Vrij,-,-,Vrij,-,18,2025
+Woensdag,2025-04-30,Apeldoorn,Vrij,-,-,Vrij,-,18,2025
+Donderdag,2025-05-01,Apeldoorn,Vrij,-,-,Vrij,-,18,2025
 Vrijdag,2025-05-02,Vrij,Vrij,-,-,-,-,18,2025
 Maandag,2025-05-05,Vakantie,Feestdag,-,-,-,-,19,2025
 Dinsdag,2025-05-06,Vakantie,Thuis,-,-,-,-,19,2025
