@@ -39,7 +39,22 @@
 
 .submit_button {
   background-color: white;
-  display: inline-block; margin: 0; padding: 8px 16px;
-  text-align: center; border: 1px solid #ccc;
-  border-radius: 8px; font-size: 16px; margin-bottom: 1em;
+  display: inline-block; 
+  margin: 0; 
+  padding: 8px 16px;
+  text-align: center; 
+  border: 1px solid #ccc;
+  border-radius: 8px; 
+  font-size: 16px; 
+  margin-bottom: 1em;
+  color: #000;
+}
+
+.element-container:has(#button-after) + div button {
+  position: fixed;
+  right: 0;
+  top: 100;
+  border: 1px solid red;
+  background-color: #fff;
+  color: #000;
 }

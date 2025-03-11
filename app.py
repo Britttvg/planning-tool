@@ -115,38 +115,28 @@ if not check_password():
 #########################
 ######### PAGES #########
 #########################
-    
-# Display a custom-styled button
-st.markdown("""
-    <style>.element-container:has(#button-after) + div button {
-    position: fixed;
-    right: 0;
-    top: 100;
-    border: 1px solid red;
-    background-color: #fff;
-    }</style>""", unsafe_allow_html=True)
-    
+
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
-    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
+    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
     if st.button(':bangbang: Push to Git'):
         commit_and_push_changes("src/data/data_planning_dev.csv")
-    st.title(f":blue[Dev]")
+    st.title(":blue[Dev]")
     ical_file = ical.create_ical("src/data/data_planning_dev.csv")
     excel.show_excel("src/data/data_planning_dev.csv", ical_file)
 
         
 if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
-    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
+    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
     if st.button(':bangbang: Push to Git'):
         commit_and_push_changes("src/data/data_planning_support.csv")
-    st.title(f":orange[Support - Exposure]")
+    st.title(":orange[Support - Exposure]")
     ical_file = ical.create_ical("src/data/data_planning_support.csv")
     excel.show_excel("src/data/data_planning_support.csv", ical_file)
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Q Dev":
-    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
+    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
     if st.button(':bangbang: Push to Git'):
         commit_and_push_changes("src/data/data_planning_q_dev.csv")
-    st.title(f":green[Q Dev]")
+    st.title(":green[Q Dev]")
     ical_file = ical.create_ical("src/data/data_planning_q_dev.csv")
     excel.show_excel("src/data/data_planning_q_dev.csv", ical_file)
