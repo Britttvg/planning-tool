@@ -19,20 +19,20 @@ Dinsdag,2025-03-04,Thuis,Thuis,-,-,-,-,10,2025
 Woensdag,2025-03-05,Apeldoorn,Revalidatie,-,-,-,-,10,2025
 Donderdag,2025-03-06,Apeldoorn,HUB50 (UX Vakdag),-,-,-,-,10,2025
 Vrijdag,2025-03-07,Vrij,Thuis,Apeldoorn,-,-,-,10,2025
-Maandag,2025-03-10,Thuis,Revalidatie,Vrij,-,-,Thuis,11,2025
-Dinsdag,2025-03-11,Thuis,Thuis,Thuis,-,-,Thuis,11,2025
-Woensdag,2025-03-12,Apeldoorn,Revalidatie,Apeldoorn,-,-,Apeldoorn tot 14:00,11,2025
-Donderdag,2025-03-13,Apeldoorn (ZeBra komt langs),Apeldoorn,Apeldoorn,-,-,Thuis,11,2025
+Maandag,2025-03-10,Thuis,Revalidatie,Vrij,-,Thuis,Thuis,11,2025
+Dinsdag,2025-03-11,Thuis,Thuis,Thuis,-,Thuis,Thuis,11,2025
+Woensdag,2025-03-12,Apeldoorn,Revalidatie,Apeldoorn,-,Apeldoorn,Apeldoorn tot 14:00,11,2025
+Donderdag,2025-03-13,Apeldoorn (ZeBra komt langs),Apeldoorn,Apeldoorn,-,Apeldoon,Thuis,11,2025
 Vrijdag,2025-03-14,Vrij,Thuis,Apeldoorn,-,-,Thuis,11,2025
-Maandag,2025-03-17,Utrecht (TROI Store),Revalidatie,Vrij,-,-,Thuis,12,2025
-Dinsdag,2025-03-18,Apeldoorn (DTT),Thuis,Apeldoorn,-,-,Thuis,12,2025
-Woensdag,2025-03-19,Apeldoorn (DTT),Revalidatie,Apeldoorn,-,-,Apeldoorn,12,2025
-Donderdag,2025-03-20,Apeldoorn/TROI-Store?,Apeldoorn,Apeldoorn,-,-,Apeldoorn tot 14:00,12,2025
+Maandag,2025-03-17,Utrecht (TROI Store),Revalidatie,Vrij,-,Thuis,Thuis,12,2025
+Dinsdag,2025-03-18,Apeldoorn (DTT),Thuis,Apeldoorn,-,Apeldoorn,Thuis,12,2025
+Woensdag,2025-03-19,Apeldoorn (DTT),Revalidatie,Apeldoorn,-,Apeldoorn,Apeldoorn,12,2025
+Donderdag,2025-03-20,Apeldoorn/TROI-Store?,Apeldoorn,Apeldoorn,-,Apeldoon,Apeldoorn tot 14:00,12,2025
 Vrijdag,2025-03-21,Vrij,Thuis,Apeldoorn,-,-,Thuis,12,2025
-Maandag,2025-03-24,Apeldoorn (DTT),Revalidatie,Warnsveld (ochtend),-,-,Thuis,13,2025
-Dinsdag,2025-03-25,DEX-XL,Thuis,DEX-XL,-,-,DEX-XL,13,2025
-Woensdag,2025-03-26,DEX-XL,Revalidatie,DEX-XL,-,-,DEX-XL,13,2025
-Donderdag,2025-03-27,Apeldoorn,Apeldoorn,Apeldoorn,-,-,Thuis/Apeldoorn,13,2025
+Maandag,2025-03-24,Apeldoorn (DTT),Revalidatie,Warnsveld (ochtend),-,Thuis,Thuis,13,2025
+Dinsdag,2025-03-25,DEX-XL,Thuis,DEX-XL,-,DEX-XL,DEX-XL,13,2025
+Woensdag,2025-03-26,DEX-XL,Revalidatie,DEX-XL,-,DEX-XL,DEX-XL,13,2025
+Donderdag,2025-03-27,Apeldoorn,Apeldoorn,Apeldoorn,-,Thuis,Thuis/Apeldoorn,13,2025
 Vrijdag,2025-03-28,Vrij,Thuis,Onbekend,-,-,Thuis,13,2025
 Maandag,2025-03-31,Thuis,Revalidatie,-,-,Thuis,-,14,2025
 Dinsdag,2025-04-01,Thuis,Thuis,-,-,Apeldoorn,-,14,2025
@@ -84,40 +84,40 @@ Dinsdag,2025-06-03,-,-,-,-,Apeldoorn,-,23,2025
 Woensdag,2025-06-04,-,-,-,-,Apeldoorn,-,23,2025
 Donderdag,2025-06-05,-,-,-,-,Apeldoorn,-,23,2025
 Vrijdag,2025-06-06,-,-,-,-,-,-,23,2025
-Maandag,2025-06-09,-,-,-,-,-,-,24,2025
-Dinsdag,2025-06-10,-,-,-,-,-,-,24,2025
-Woensdag,2025-06-11,-,-,-,-,-,-,24,2025
-Donderdag,2025-06-12,-,-,-,-,-,-,24,2025
+Maandag,2025-06-09,-,-,-,-,Thuis,-,24,2025
+Dinsdag,2025-06-10,-,-,-,-,Apeldoorn,-,24,2025
+Woensdag,2025-06-11,-,-,-,-,Apeldoorn,-,24,2025
+Donderdag,2025-06-12,-,-,-,-,Apeldoorn,-,24,2025
 Vrijdag,2025-06-13,-,-,-,-,-,-,24,2025
-Maandag,2025-06-16,-,-,-,-,-,-,25,2025
-Dinsdag,2025-06-17,-,-,-,-,-,-,25,2025
-Woensdag,2025-06-18,-,-,-,-,-,-,25,2025
-Donderdag,2025-06-19,-,-,-,-,-,-,25,2025
+Maandag,2025-06-16,-,-,-,-,Thuis,-,25,2025
+Dinsdag,2025-06-17,-,-,-,-,Apeldoorn,-,25,2025
+Woensdag,2025-06-18,-,-,-,-,Apeldoorn,-,25,2025
+Donderdag,2025-06-19,-,-,-,-,Apeldoorn,-,25,2025
 Vrijdag,2025-06-20,-,-,-,-,-,-,25,2025
-Maandag,2025-06-23,-,-,-,-,-,-,26,2025
-Dinsdag,2025-06-24,-,-,-,-,-,-,26,2025
-Woensdag,2025-06-25,-,-,-,-,-,-,26,2025
-Donderdag,2025-06-26,-,-,-,-,-,-,26,2025
+Maandag,2025-06-23,-,-,-,-,Thuis,-,26,2025
+Dinsdag,2025-06-24,-,-,-,-,Apeldoorn,-,26,2025
+Woensdag,2025-06-25,-,-,-,-,Apeldoorn,-,26,2025
+Donderdag,2025-06-26,-,-,-,-,Apeldoorn,-,26,2025
 Vrijdag,2025-06-27,-,-,-,-,-,-,26,2025
-Maandag,2025-06-30,-,-,-,-,-,-,27,2025
-Dinsdag,2025-07-01,-,-,-,-,-,-,27,2025
-Woensdag,2025-07-02,-,-,-,-,-,-,27,2025
-Donderdag,2025-07-03,-,-,-,-,-,-,27,2025
+Maandag,2025-06-30,-,-,-,-,Thuis,-,27,2025
+Dinsdag,2025-07-01,-,-,-,-,Apeldoorn,-,27,2025
+Woensdag,2025-07-02,-,-,-,-,Apeldoorn,-,27,2025
+Donderdag,2025-07-03,-,-,-,-,Apeldoorn,-,27,2025
 Vrijdag,2025-07-04,-,-,-,-,-,-,27,2025
-Maandag,2025-07-07,-,-,-,-,-,-,28,2025
-Dinsdag,2025-07-08,-,-,-,-,-,-,28,2025
-Woensdag,2025-07-09,-,-,-,-,-,-,28,2025
-Donderdag,2025-07-10,-,-,-,-,-,-,28,2025
+Maandag,2025-07-07,-,-,-,-,Thuis,-,28,2025
+Dinsdag,2025-07-08,-,-,-,-,Apeldoorn,-,28,2025
+Woensdag,2025-07-09,-,-,-,-,Apeldoorn,-,28,2025
+Donderdag,2025-07-10,-,-,-,-,Apeldoorn,-,28,2025
 Vrijdag,2025-07-11,-,-,-,-,-,-,28,2025
-Maandag,2025-07-14,-,-,-,-,-,-,29,2025
-Dinsdag,2025-07-15,-,-,-,-,-,-,29,2025
-Woensdag,2025-07-16,-,-,-,-,-,-,29,2025
-Donderdag,2025-07-17,-,-,-,-,-,-,29,2025
+Maandag,2025-07-14,-,-,-,-,Thuis,-,29,2025
+Dinsdag,2025-07-15,-,-,-,-,Apeldoorn,-,29,2025
+Woensdag,2025-07-16,-,-,-,-,Apeldoorn,-,29,2025
+Donderdag,2025-07-17,-,-,-,-,Apeldoorn,-,29,2025
 Vrijdag,2025-07-18,-,-,-,-,-,-,29,2025
-Maandag,2025-07-21,-,-,-,-,-,-,30,2025
-Dinsdag,2025-07-22,-,-,-,-,-,-,30,2025
-Woensdag,2025-07-23,-,-,-,-,-,-,30,2025
-Donderdag,2025-07-24,-,-,-,-,-,-,30,2025
+Maandag,2025-07-21,-,-,-,-,Thuis,-,30,2025
+Dinsdag,2025-07-22,-,-,-,-,Apeldoorn,-,30,2025
+Woensdag,2025-07-23,-,-,-,-,Apeldoorn,-,30,2025
+Donderdag,2025-07-24,-,-,-,-,Apeldoorn,-,30,2025
 Vrijdag,2025-07-25,-,-,-,-,-,-,30,2025
 Maandag,2025-07-28,-,-,-,-,-,-,31,2025
 Dinsdag,2025-07-29,-,-,-,-,-,-,31,2025
