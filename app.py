@@ -71,10 +71,7 @@ def commit_and_push_changes(data_url):
    
 def password_entered():
     """Checks whether a password entered by the user is correct."""
-    if st.session_state["password"] == st.secrets["password"]:
-        st.session_state["password_correct"] = True
-    else:
-        st.session_state["password_correct"] = False   
+    st.session_state["password_correct"] = st.session_state["password"] == st.secrets["password"]
   
 def check_password():
     """Returns `True` if the user had the correct password."""
