@@ -2,11 +2,9 @@ from src.pages import excel, ical
 import streamlit as st
 from streamlit_option_menu import option_menu
 from datetime import datetime
-import hmac
 import os
 import git
 from dotenv import load_dotenv
-import time
 
 st.set_page_config(page_title="Planning tool", page_icon=":calendar:", layout="wide")
 
@@ -70,44 +68,34 @@ def commit_and_push_changes(data_url):
         success_placeholder.success(f"Data {data_url} saved and pushed to git.")
     except Exception as e:
         st.warning(f"Error saving data: {e}")
-        
+   
+def password_entered():
+    """Checks whether a password entered by the user is correct."""
+    if st.session_state["password"] == st.secrets["password"]:
+        st.session_state["password_correct"] = True
+        del st.session_state["password"]  # Don't store the password.
+    else:
+        st.session_state["password_correct"] = False   
+  
 def check_password():
     """Returns `True` if the user had the correct password."""
-
-    def password_entered():
-        """Checks whether a password entered by the user is correct."""
-        if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
-            st.session_state["password_correct"] = True
-            del st.session_state["password"]  # Don't store the password.
-        else:
-            st.session_state["password_correct"] = False
-
-    # Return True if the password is validated.
-    if st.session_state.get("password_correct", False):
+    # Initialize session state if not already initialized
+    if "password" not in st.session_state:
+        st.session_state["password"] = ""
+    
+    if "password_correct" in st.session_state and st.session_state["password_correct"]:
         return True
 
     # Show input for password.
-    st.text_input(
-        "Voer wachtwoord in",
-        type="password",
-        on_change=password_entered,
-        key="password",
-    )
+    st.text_input("Voer wachtwoord in", type="password", on_change=password_entered, key="password")
     
-    # Use Markdown with HTML to style text as a button
-    button_html = """
-    <button class="submit_button">
-        Submit
-    </button>
-    """
+    if st.button("Submit", key="password_button"):
+        password_entered()
 
-    # Display the "button" using st.markdown
-    st.markdown(button_html, unsafe_allow_html=True)
-
-    if "password_correct" in st.session_state:
+    if "password_correct" in st.session_state and not st.session_state["password_correct"] and st.session_state["password"]:
         st.error("😕 Onjuist wachtwoord")
+    
     return False
-
 
 if not check_password():
     st.stop()
