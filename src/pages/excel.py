@@ -90,16 +90,7 @@ def toggle_view_state(view_key, week_key, group):
     st.session_state[week_key] = group.copy()
 
 
-def show_excel(data_url, ical_file):
-
-    st.download_button(
-        label="iCal",
-        icon=":material/download:",
-        data=ical_file,
-        file_name="data_planning.ics",
-        mime="text/calendar",
-    )
-
+def show_excel(data_url):
     # Save the data_url choice in session state
     if (
         "data_url_choice" not in st.session_state
