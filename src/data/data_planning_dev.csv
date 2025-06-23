@@ -95,7 +95,7 @@ Woensdag,2025-06-18,Apeldoorn,Revalidatie,Apeldoorn,-,Apeldoorn,Apeldoorn,25,202
 Donderdag,2025-06-19,Apeldoorn,Apeldoorn,Apeldoorn,-,Apeldoorn,Apeldoorn,25,2025
 Vrijdag,2025-06-20,Vrij,Thuis,Apeldoorn,-,-,Thuis,25,2025
 Maandag,2025-06-23,Apeldoorn (start Jeanne/DTT),Revalidatie,-,Apeldoorn,Thuis,Thuis,26,2025
-Dinsdag,2025-06-24,Apeldoorn (DTT),Thuis,Apeldoorn,-,Apeldoorn,Thuis,26,2025
+Dinsdag,2025-06-24,Apeldoorn (DTT),Thuis,Apeldoorn,Apeldoorn,Apeldoorn,Thuis,26,2025
 Woensdag,2025-06-25,Apeldoorn (DTT),Revalidatie,Apeldoorn,-,Apeldoorn,Apeldoorn,26,2025
 Donderdag,2025-06-26,Apeldoorn,Apeldoorn,Apeldoorn,-,Apeldoorn,Apeldoorn,26,2025
 Vrijdag,2025-06-27,Vrij,Thuis,-,-,-,Thuis,26,2025
@@ -114,11 +114,11 @@ Dinsdag,2025-07-15,Vrij?,-,-,-,Apeldoorn,-,29,2025
 Woensdag,2025-07-16,Vrij?,-,-,-,Apeldoorn,-,29,2025
 Donderdag,2025-07-17,Vrij?,-,-,-,Apeldoorn,-,29,2025
 Vrijdag,2025-07-18,Vrij,-,-,-,-,Verlof,29,2025
-Maandag,2025-07-21,Thuis,-,-,-,Thuis,Verlof,30,2025
-Dinsdag,2025-07-22,Thuis,-,-,-,Apeldoorn,-,30,2025
-Woensdag,2025-07-23,Apeldoorn,-,-,-,Apeldoorn,-,30,2025
-Donderdag,2025-07-24,Apeldoorn,-,-,-,Apeldoorn,-,30,2025
-Vrijdag,2025-07-25,Vrij,-,-,-,-,-,30,2025
+Maandag,2025-07-21,Thuis,-,-,-,Vrij,Verlof,30,2025
+Dinsdag,2025-07-22,Thuis,-,-,-,Vrij,-,30,2025
+Woensdag,2025-07-23,Apeldoorn,-,-,-,Vrij,-,30,2025
+Donderdag,2025-07-24,Apeldoorn,-,-,-,Vrij,-,30,2025
+Vrijdag,2025-07-25,Vrij,-,-,-,Vrij,-,30,2025
 Maandag,2025-07-28,Thuis,-,-,-,-,-,31,2025
 Dinsdag,2025-07-29,Thuis,-,-,-,-,-,31,2025
 Woensdag,2025-07-30,Apeldoorn,-,-,-,-,-,31,2025
