@@ -86,6 +86,8 @@ def highlight_apeldoorn(val):
 
 
 def show_excel(data_url):
+    # Call the download function after processing all weeks in `show_excel`
+    download_all_weeks_csv(data_url)
     # Save the data_url choice in session state
     if (
         "data_url_choice" not in st.session_state
@@ -167,6 +169,5 @@ def show_excel(data_url):
             if not data_editor2.equals(st.session_state[week_key]):
                 # Call update_csv to save the changes for the specific week using the unique name
                 update_csv(data_editor2, week, data_url)
-           
-    # Call the download function after processing all weeks in `show_excel`
-    download_all_weeks_csv(data_url)
+                # ✅ Update session state with the latest version
+                st.session_state[week_key] = data_editor2.copy()
