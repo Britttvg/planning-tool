@@ -170,4 +170,5 @@ def show_excel(data_url):
                 # Call update_csv to save the changes for the specific week using the unique name
                 update_csv(data_editor2, week, data_url)
                 # ✅ Update session state with the latest version
-                st.session_state[week_key] = data_editor2.copy()
+            
+            st.session_state[week_key] = data_editor2.copy()
