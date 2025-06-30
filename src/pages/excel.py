@@ -85,11 +85,6 @@ def highlight_apeldoorn(val):
     return val
 
 
-def toggle_view_state(view_key, week_key, group):
-    st.session_state[view_key] = not st.session_state[view_key]
-    st.session_state[week_key] = group.copy()
-
-
 def show_excel(data_url):
     # Save the data_url choice in session state
     if (
@@ -137,19 +132,6 @@ def show_excel(data_url):
             if week_key not in st.session_state:
                 st.session_state[week_key] = group.copy()
 
-            # Create a toggle for view mode
-            view_key = f"view_{week}_{year}"
-            if view_key not in st.session_state:
-                st.session_state[view_key] = False  # Default is editable mode
-
-            # Toggle button to switch between views
-            st.toggle(
-                label=":art:",
-                value=st.session_state[view_key],
-                key=f"toggle_{week}_{year}",
-                on_change=toggle_view_state,
-                args=(view_key, week_key, group),
-            )
 
             for index, row in group.iterrows():
                 day = row["Dag"]  # Assuming 'Dag' column contains the day of the week
@@ -168,45 +150,23 @@ def show_excel(data_url):
             )
 
             # Display the counts in a single line
-            st.write(f"**Apeldoorn** | {occurrences_str} |")
+            st.write(f"**Apeldoorn:** {occurrences_str}")
             
-            # Display based on the current view mode
-            if st.session_state[view_key]:
-                # View mode: Display with color styling for 'Apeldoorn'
-                styled_data = group.copy().astype(
-                    str
-                )  # Ensure all data is string for replacement
-                styled_data["Datum"] = pd.to_datetime(
-                    styled_data["Datum"], format="%Y-%m-%d", errors="coerce"
-                )
-                # Format the dates to "DD-MM-YYYY", leave other values unchanged
-                styled_data["Datum"] = (
-                    styled_data["Datum"].dt.strftime("%d-%m-%Y").fillna(group["Datum"])
-                )
-                styled_data = styled_data.map(highlight_apeldoorn)
+            data_editor2 = st.data_editor(
+                st.session_state[
+                    week_key
+                ],  # Use the session state version of the group
+                hide_index=True,  # Hide the index column
+                key=f"data_editor_dev_{week}_{year}",  # Unique key for each editor
+                column_config=column_config,  # Disable editing for 'Datum'
+            )
 
-                # Render the DataFrame as HTML using st.write()
-                st.write(
-                    styled_data.to_html(escape=False, index=False),
-                    unsafe_allow_html=True,
-                )
+            data_editor2 = data_editor2.fillna("-")
 
-            else:
-                data_editor2 = st.data_editor(
-                    st.session_state[
-                        week_key
-                    ],  # Use the session state version of the group
-                    hide_index=True,  # Hide the index column
-                    key=f"data_editor_dev_{week}_{year}",  # Unique key for each editor
-                    column_config=column_config,  # Disable editing for 'Datum'
-                )
-
-                data_editor2 = data_editor2.fillna("-")
-
-                # If data is changed, update the CSV file
-                if not data_editor2.equals(st.session_state[week_key]):
-                    # Call update_csv to save the changes for the specific week using the unique name
-                    update_csv(data_editor2, week, data_url)
+            # If data is changed, update the CSV file
+            if not data_editor2.equals(st.session_state[week_key]):
+                # Call update_csv to save the changes for the specific week using the unique name
+                update_csv(data_editor2, week, data_url)
            
     # Call the download function after processing all weeks in `show_excel`
     download_all_weeks_csv(data_url)
