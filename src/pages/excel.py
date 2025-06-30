@@ -153,22 +153,18 @@ def show_excel(data_url):
 
             # Display the counts in a single line
             st.write(f"**Apeldoorn:** {occurrences_str}")
-            
+
+            # Render the data editor
             data_editor2 = st.data_editor(
-                st.session_state[
-                    week_key
-                ],  # Use the session state version of the group
-                hide_index=True,  # Hide the index column
-                key=f"data_editor_dev_{week}_{year}",  # Unique key for each editor
-                column_config=column_config,  # Disable editing for 'Datum'
+                st.session_state[week_key],  # Live binding to session state
+                hide_index=True,
+                key=f"data_editor_dev_{week}_{year}",
+                column_config=column_config,
             )
 
             data_editor2 = data_editor2.fillna("-")
 
-            # If data is changed, update the CSV file
+            # Detect changes by comparing session state with the new data
             if not data_editor2.equals(st.session_state[week_key]):
-                # Call update_csv to save the changes for the specific week using the unique name
+                # Save edited version
                 update_csv(data_editor2, week, data_url)
-                # ✅ Update session state with the latest version
-            
-            st.session_state[week_key] = data_editor2.copy()
