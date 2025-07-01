@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import datetime
-import threading
+import os
 
 # Mapping for full day names to abbreviations
 day_abbreviations = {
@@ -45,24 +45,29 @@ def download_all_weeks_csv(data_url):
         file_name=f"all_weeks_{base_name}.csv",
         mime="text/csv",
     )
-    
-def update_csv(edited_data, week, data_url):
-    """Function to update the CSV file with the edited data."""
-    try:
-        original_data = pd.read_csv(data_url)
-        
-        original_data['Datum'] = pd.to_datetime(original_data['Datum']).dt.date.astype(str)
-        edited_data['Datum'] = pd.to_datetime(edited_data['Datum']).dt.date.astype(str)
-        
-        # Overwrite the relevant rows in the original_data with the edited group
-        original_data.update(edited_data)
 
-        # Save the concatenated DataFrame back to the CSV file
-        original_data.to_csv(data_url, index=False)
-        
-        st.success(f"Data locally saved for week {week}.")
+def load_week_data_or_original(group, week, year):
+    """Try loading the edited week data from tmp_data; fall back to original."""
+    filename = f"week_{week}_{year}.csv"
+    file_path = os.path.join("tmp_data", filename)
+    if os.path.exists(file_path):
+        try:
+            return pd.read_csv(file_path)
+        except Exception as e:
+            st.warning(f"Error loading saved file for week {week}: {e}")
+    return group.copy()
+
+ 
+def save_edited_week_csv(edited_data, week, year):
+    """Save the edited week data to a separate file in tmp_data/."""
+    try:
+        os.makedirs("tmp_data", exist_ok=True)
+        filename = f"week_{week}_{year}.csv"
+        file_path = os.path.join("tmp_data", filename)
+        edited_data.to_csv(file_path, index=False)
+        st.success(f"Data saved for week {week}, {year}")
     except Exception as e:
-        st.warning(f"Error saving data: {e}")
+        st.error(f"Failed to save week {week}, {year}: {e}")
 
 
 def reset_session_state_week():
@@ -132,8 +137,7 @@ def show_excel(data_url):
             week_key = f"week_{week}_{year}"
 
             if week_key not in st.session_state:
-                st.session_state[week_key] = group.copy()
-
+                st.session_state[week_key] = load_week_data_or_original(group, week, year)
 
             for index, row in group.iterrows():
                 day = row["Dag"]  # Assuming 'Dag' column contains the day of the week
@@ -167,4 +171,4 @@ def show_excel(data_url):
             # Detect changes by comparing session state with the new data
             if not data_editor2.equals(st.session_state[week_key]):
                 # Save edited version
-                update_csv(data_editor2, week, data_url)
+                save_edited_week_csv(data_editor2, week, year)

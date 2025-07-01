@@ -63,3 +63,4 @@ venv.bak/
 .vscode
 notes.txt
 .streamlit/secrets.toml
+tmp_data/
