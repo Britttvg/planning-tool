@@ -47,28 +47,31 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 load_dotenv()
 
 def merge_all_edits(original_path: str) -> pd.DataFrame:
-    """Merge original CSV with all per-week edits from tmp_data."""
+    """Merge original CSV with all per-week edits from tmp_data/."""
     df_original = pd.read_csv(original_path)
-    df_original["Datum"] = pd.to_datetime(df_original["Datum"])
-    df_original["Week"] = df_original["Datum"].dt.isocalendar().week
-    df_original["Jaar"] = df_original["Datum"].dt.year
-
-    edited_files = [f for f in os.listdir("tmp_data") if f.endswith(".csv")]
+    df_original["Datum"] = pd.to_datetime(df_original["Datum"], dayfirst=False)
     
+    edited_files = [f for f in os.listdir("tmp_data") if f.endswith(".csv") and f.startswith("week_")]
+
     for f in edited_files:
         try:
-            week, year = map(int, f.replace("week_", "").replace(".csv", "").split("_"))
             df_edit = pd.read_csv(os.path.join("tmp_data", f))
-            df_edit["Datum"] = pd.to_datetime(df_edit["Datum"])
-            df_edit["Week"] = df_edit["Datum"].dt.isocalendar().week
-            df_edit["Jaar"] = df_edit["Datum"].dt.year
+            df_edit["Datum"] = pd.to_datetime(df_edit["Datum"], dayfirst=False)
 
-            # Overwrite matching rows in original
-            mask = (df_original["Week"] == week) & (df_original["Jaar"] == year)
-            df_original.loc[mask, :] = df_edit
+            # Use "Datum" as unique identifier to match and update rows
+            df_edit.set_index("Datum", inplace=True)
+            df_original.set_index("Datum", inplace=True)
+
+            df_original.update(df_edit)
+
+            # Reset index back to columns
+            df_original.reset_index(inplace=True)
         except Exception as e:
             st.warning(f"Error merging {f}: {e}")
-    return df_original.drop(columns=["Week", "Jaar"], errors="ignore")
+
+    df_original["Week"] = df_original["Datum"].dt.isocalendar().week
+    df_original["Jaar"] = df_original["Datum"].dt.year.astype(int)
+    return df_original
 
 
 def save_merged_to_repo_file(merged_df: pd.DataFrame, save_path: str):
