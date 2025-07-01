@@ -77,19 +77,6 @@ def reset_session_state_week():
             del st.session_state[key]
 
 
-def highlight_apeldoorn(val):
-    """Function to apply color styling to cells containing 'Apeldoorn'."""
-    if "Apeldoorn" in str(val) or "apeldoorn" in str(val):
-        return (
-            f'<span style="background-color: #A9D08E; font-weight: bold">{val}</span>'
-        )
-    elif "Thuis" in str(val) or "thuis" in str(val):
-        return f'<span style="background-color: #9BC2E6;">{val}</span>'
-    elif ("Vrij" in str(val) or "vrij" in str(val)) and not "Vrijdag" in str(val):
-        return f'<span style="background-color: #F4B084;">{val}</span>'
-    return val
-
-
 def show_excel(data_url):
     # Call the download function after processing all weeks in `show_excel`
     download_all_weeks_csv(data_url)
@@ -139,7 +126,7 @@ def show_excel(data_url):
             if week_key not in st.session_state:
                 st.session_state[week_key] = load_week_data_or_original(group, week, year)
 
-            for index, row in group.iterrows():
+            for _, row in group.iterrows():
                 day = row["Dag"]  # Assuming 'Dag' column contains the day of the week
                 if day not in occurrences_per_day:
                     occurrences_per_day[day] = 0  # Initialize count for the day
@@ -164,9 +151,7 @@ def show_excel(data_url):
                 hide_index=True,
                 key=f"data_editor_dev_{week}_{year}",
                 column_config=column_config,
-            )
-
-            data_editor2 = data_editor2.fillna("-")
+            ).fillna("-")
 
             # Detect changes by comparing session state with the new data
             if not data_editor2.equals(st.session_state[week_key]):

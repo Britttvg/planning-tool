@@ -5,6 +5,7 @@ from datetime import datetime
 import os
 import git
 from dotenv import load_dotenv
+import pandas as pd
 
 st.set_page_config(page_title="Planning tool", page_icon=":calendar:", layout="wide")
 
@@ -15,13 +16,9 @@ with st.sidebar:
         "Menu",
         [
             f"Week {datetime.today().isocalendar()[1]} - Dev",
-            f"Week {datetime.today().isocalendar()[1]} - Support - Exposure",
-            f"Week {datetime.today().isocalendar()[1]} - Q Dev",
         ],
         # Icons from https://icons.getbootstrap.com
         icons=[
-            "file-earmark-spreadsheet",
-            "file-earmark-spreadsheet",
             "file-earmark-spreadsheet",
         ],
         menu_icon="house",
@@ -49,23 +46,57 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 # Load environment variables from .env file
 load_dotenv()
 
-def commit_and_push_changes(data_url):
+def merge_all_edits(original_path: str) -> pd.DataFrame:
+    """Merge original CSV with all per-week edits from tmp_data."""
+    df_original = pd.read_csv(original_path)
+    df_original["Datum"] = pd.to_datetime(df_original["Datum"])
+    df_original["Week"] = df_original["Datum"].dt.isocalendar().week
+    df_original["Jaar"] = df_original["Datum"].dt.year
+
+    edited_files = [f for f in os.listdir("tmp_data") if f.endswith(".csv")]
+    
+    for f in edited_files:
+        try:
+            week, year = map(int, f.replace("week_", "").replace(".csv", "").split("_"))
+            df_edit = pd.read_csv(os.path.join("tmp_data", f))
+            df_edit["Datum"] = pd.to_datetime(df_edit["Datum"])
+            df_edit["Week"] = df_edit["Datum"].dt.isocalendar().week
+            df_edit["Jaar"] = df_edit["Datum"].dt.year
+
+            # Overwrite matching rows in original
+            mask = (df_original["Week"] == week) & (df_original["Jaar"] == year)
+            df_original.loc[mask, :] = df_edit
+        except Exception as e:
+            st.warning(f"Error merging {f}: {e}")
+    return df_original.drop(columns=["Week", "Jaar"], errors="ignore")
+
+
+def save_merged_to_repo_file(merged_df: pd.DataFrame, save_path: str):
+    """Save merged DataFrame to repo-tracked file (for commit)."""
+    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    merged_df.to_csv(save_path, index=False)
+
+
+def commit_and_push_changes(source_data_path: str, output_csv_path: str):
     """Function to commit and push changes to GitHub."""
     success_placeholder = st.empty()
     success_placeholder.empty()  # Clear the message
     try:
+        merged = merge_all_edits(source_data_path)
+        save_merged_to_repo_file(merged, output_csv_path)
+        
         repo = git.Repo()
         repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
         repo.git.checkout('main')
         repo.remotes.origin.pull()
 
         # Add, commit, and push the changes to the repository
-        repo.git.add(data_url)
-        repo.index.commit(f'Update CSV {data_url}, time {datetime.now()}')
+        repo.git.add(output_csv_path)
+        repo.index.commit(f'Update CSV {output_csv_path}, time {datetime.now()}')
         repo.remotes.origin.push()
 
         # Temporary success message
-        success_placeholder.success(f"Data {data_url} saved and pushed to git.")
+        success_placeholder.success(f"Data {output_csv_path} saved and pushed to git.")
     except Exception as e:
         st.warning(f"Error saving data: {e}")
    
@@ -103,21 +134,6 @@ if not check_password():
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
     st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
     if st.button(':bangbang: Push to Git'):
-        commit_and_push_changes("src/data/data_planning_dev.csv")
+        commit_and_push_changes("src/data/data_planning_dev.csv", "data/merged_output.csv")
     st.title(":blue[Dev]")
     excel.show_excel("src/data/data_planning_dev.csv")
-
-        
-if choice == f"Week {datetime.today().isocalendar()[1]} - Support - Exposure":
-    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
-    if st.button(':bangbang: Push to Git'):
-        commit_and_push_changes("src/data/data_planning_support.csv")
-    st.title(":orange[Support - Exposure]")
-    excel.show_excel("src/data/data_planning_support.csv")
-
-if choice == f"Week {datetime.today().isocalendar()[1]} - Q Dev":
-    st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
-    if st.button(':bangbang: Push to Git'):
-        commit_and_push_changes("src/data/data_planning_q_dev.csv")
-    st.title(":green[Q Dev]")
-    excel.show_excel("src/data/data_planning_q_dev.csv")
