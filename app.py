@@ -77,13 +77,13 @@ def save_merged_to_repo_file(merged_df: pd.DataFrame, save_path: str):
     merged_df.to_csv(save_path, index=False)
 
 
-def commit_and_push_changes(source_data_path: str, output_csv_path: str):
+def commit_and_push_changes(source_data_path: str):
     """Function to commit and push changes to GitHub."""
     success_placeholder = st.empty()
     success_placeholder.empty()  # Clear the message
     try:
         merged = merge_all_edits(source_data_path)
-        save_merged_to_repo_file(merged, output_csv_path)
+        save_merged_to_repo_file(merged, source_data_path)
         
         repo = git.Repo()
         repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
@@ -91,12 +91,12 @@ def commit_and_push_changes(source_data_path: str, output_csv_path: str):
         repo.remotes.origin.pull()
 
         # Add, commit, and push the changes to the repository
-        repo.git.add(output_csv_path)
-        repo.index.commit(f'Update CSV {output_csv_path}, time {datetime.now()}')
+        repo.git.add(source_data_path)
+        repo.index.commit(f'Update CSV {source_data_path}, time {datetime.now()}')
         repo.remotes.origin.push()
 
         # Temporary success message
-        success_placeholder.success(f"Data {output_csv_path} saved and pushed to git.")
+        success_placeholder.success(f"Data {source_data_path} saved and pushed to git.")
     except Exception as e:
         st.warning(f"Error saving data: {e}")
    
@@ -134,6 +134,6 @@ if not check_password():
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
     st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
     if st.button(':bangbang: Push to Git'):
-        commit_and_push_changes("src/data/data_planning_dev.csv", "data/merged_output.csv")
+        commit_and_push_changes("src/data/data_planning_dev.csv")
     st.title(":blue[Dev]")
     excel.show_excel("src/data/data_planning_dev.csv")
