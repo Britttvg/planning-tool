@@ -83,20 +83,20 @@ def save_merged_to_repo_file(merged_df: pd.DataFrame, save_path: str):
 def commit_and_push_changes(source_data_path: str):
     """Function to commit and push changes to GitHub."""
     success_placeholder = st.empty()
-    success_placeholder.empty()  # Clear the message
     try:
-        merged = merge_all_edits(source_data_path)
-        save_merged_to_repo_file(merged, source_data_path)
-        
-        repo = git.Repo()
-        repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
-        repo.git.checkout('main')
-        repo.remotes.origin.pull()
+        with st.spinner("Merging and pushing data..."):
+            merged = merge_all_edits(source_data_path)
+            save_merged_to_repo_file(merged, source_data_path)
+            
+            repo = git.Repo()
+            repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
+            repo.git.checkout('main')
+            repo.remotes.origin.pull()
 
-        # Add, commit, and push the changes to the repository
-        repo.git.add(source_data_path)
-        repo.index.commit(f'Update CSV {source_data_path}, time {datetime.now()}')
-        repo.remotes.origin.push()
+            # Add, commit, and push the changes to the repository
+            repo.git.add(source_data_path)
+            repo.index.commit(f'Update CSV {source_data_path}, time {datetime.now()}')
+            repo.remotes.origin.push()
 
         # Temporary success message
         success_placeholder.success(f"Data {source_data_path} saved and pushed to git.")

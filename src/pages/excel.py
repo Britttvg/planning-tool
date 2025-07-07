@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 import os
+import time
 
 # Mapping for full day names to abbreviations
 day_abbreviations = {
@@ -60,12 +61,16 @@ def load_week_data_or_original(group, week, year):
  
 def save_edited_week_csv(edited_data, week, year):
     """Save the edited week data to a separate file in tmp_data/."""
+    saved_placeholder = st.empty()
     try:
         os.makedirs("tmp_data", exist_ok=True)
         filename = f"week_{week}_{year}.csv"
         file_path = os.path.join("tmp_data", filename)
         edited_data.to_csv(file_path, index=False)
-        st.success(f"Data saved for week {week}, {year}")
+        saved_placeholder.success(f"Data saved for week {week}, {year}")
+        # Wait a few seconds, then clear it
+        time.sleep(3)
+        saved_placeholder.empty()
     except Exception as e:
         st.error(f"Failed to save week {week}, {year}: {e}")
 
