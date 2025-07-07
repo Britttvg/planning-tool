@@ -6,6 +6,7 @@ import os
 import git
 from dotenv import load_dotenv
 import pandas as pd
+import time
 
 st.set_page_config(page_title="Planning tool", page_icon=":calendar:", layout="wide")
 
@@ -100,6 +101,8 @@ def commit_and_push_changes(source_data_path: str):
 
         # Temporary success message
         success_placeholder.success(f"Data {source_data_path} saved and pushed to git.")
+        time.sleep(1)
+        success_placeholder.empty()
     except Exception as e:
         st.warning(f"Error saving data: {e}")
    

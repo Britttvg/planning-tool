@@ -69,7 +69,7 @@ def save_edited_week_csv(edited_data, week, year):
         edited_data.to_csv(file_path, index=False)
         saved_placeholder.success(f"Data saved for week {week}, {year}")
         # Wait a few seconds, then clear it
-        time.sleep(3)
+        time.sleep(1)
         saved_placeholder.empty()
     except Exception as e:
         st.error(f"Failed to save week {week}, {year}: {e}")
