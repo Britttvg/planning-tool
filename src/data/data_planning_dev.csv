@@ -14,8 +14,8 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-07-16,Woensdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,-,29,2025
 2025-07-17,Donderdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,-,29,2025
 2025-07-18,Vrijdag,Vrij,-,Apeldoorn,-,-,Verlof,29,2025
-2025-07-21,Maandag,Thuis,-,-,-,Vrij,Verlof,30,2025
-2025-07-22,Dinsdag,Thuis,-,Apeldoorn,-,Vrij,-,30,2025
+2025-07-21,Maandag,Thuis,-,-,Thuis,Vrij,Verlof,30,2025
+2025-07-22,Dinsdag,Thuis,-,Apeldoorn,Thuis,Vrij,-,30,2025
 2025-07-23,Woensdag,Apeldoorn,-,Verlof,Apeldoorn,Vrij,-,30,2025
 2025-07-24,Donderdag,Apeldoorn,-,Verlof,Apeldoorn,Vrij,-,30,2025
 2025-07-25,Vrijdag,Vrij,-,Verlof,-,Vrij,-,30,2025
