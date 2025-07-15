@@ -9,21 +9,21 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-07-09,Woensdag,Apeldoorn,Vrij,Apeldoorn,Apeldoorn,Apeldoorn,-,28,2025
 2025-07-10,Donderdag,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Thuis,-,28,2025
 2025-07-11,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,-,28,2025
-2025-07-14,Maandag,Vrij,-,-,Utrecht (HUB50),Thuis,-,29,2025
-2025-07-15,Dinsdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,-,29,2025
-2025-07-16,Woensdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,-,29,2025
-2025-07-17,Donderdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,-,29,2025
+2025-07-14,Maandag,Vrij,-,-,Utrecht (HUB50),Thuis,Thuis,29,2025
+2025-07-15,Dinsdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,Thuis,29,2025
+2025-07-16,Woensdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,Apeldoorn,29,2025
+2025-07-17,Donderdag,Vrij,-,Apeldoorn,Vrij,Apeldoorn,Thuis,29,2025
 2025-07-18,Vrijdag,Vrij,-,Apeldoorn,-,-,Verlof,29,2025
 2025-07-21,Maandag,Thuis,-,-,Thuis,Vrij,Verlof,30,2025
-2025-07-22,Dinsdag,Thuis,-,Apeldoorn,Thuis,Vrij,-,30,2025
-2025-07-23,Woensdag,Apeldoorn,-,Verlof,Apeldoorn,Vrij,-,30,2025
-2025-07-24,Donderdag,Apeldoorn,-,Verlof,Apeldoorn,Vrij,-,30,2025
-2025-07-25,Vrijdag,Vrij,-,Verlof,-,Vrij,-,30,2025
-2025-07-28,Maandag,Thuis,-,Verlof,-,Thuis,-,31,2025
-2025-07-29,Dinsdag,Thuis,-,Verlof,-,Apeldoorn,-,31,2025
-2025-07-30,Woensdag,Apeldoorn,-,Verlof,-,Apeldoorn,-,31,2025
-2025-07-31,Donderdag,Apeldoorn,-,Verlof,-,Apeldoorn,-,31,2025
-2025-08-01,Vrijdag,Vrij,-,Verlof,-,-,-,31,2025
+2025-07-22,Dinsdag,Thuis,-,Apeldoorn,Thuis,Vrij,Thuis,30,2025
+2025-07-23,Woensdag,Apeldoorn,-,Verlof,Apeldoorn,Vrij,Apeldoorn,30,2025
+2025-07-24,Donderdag,Apeldoorn,-,Verlof,Apeldoorn,Vrij,Apeldoorn,30,2025
+2025-07-25,Vrijdag,Vrij,-,Verlof,-,Vrij,Thuis,30,2025
+2025-07-28,Maandag,Thuis,-,Verlof,-,Thuis,Thuis halve dag,31,2025
+2025-07-29,Dinsdag,Thuis,-,Verlof,-,Apeldoorn,Thuis,31,2025
+2025-07-30,Woensdag,Apeldoorn,-,Verlof,-,Apeldoorn,Apeldoorn,31,2025
+2025-07-31,Donderdag,Apeldoorn,-,Verlof,-,Apeldoorn,Apeldoorn,31,2025
+2025-08-01,Vrijdag,Vrij,-,Verlof,-,-,Thuis,31,2025
 2025-08-04,Maandag,Thuis,-,Verlof,-,Thuis,-,32,2025
 2025-08-05,Dinsdag,Thuis,-,Verlof,-,Apeldoorn,-,32,2025
 2025-08-06,Woensdag,Apeldoorn,-,Verlof,-,Apeldoorn,-,32,2025
