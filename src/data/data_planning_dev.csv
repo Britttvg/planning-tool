@@ -45,10 +45,10 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-08-28,Donderdag,Apeldoorn,Apeldoorn,-,Apeldoorn,-,-,35,2025
 2025-08-29,Vrijdag,Vrij,Thuis/vrij,-,-,-,-,35,2025
 2025-09-01,Maandag,Thuis,Thuis,-,-,-,-,36,2025
-2025-09-02,Dinsdag,Thuis,Thuis,-,-,-,-,36,2025
-2025-09-03,Woensdag,Apeldoorn,-,-,-,-,-,36,2025
-2025-09-04,Donderdag,Apeldoorn,Apeldoorn,-,-,-,-,36,2025
-2025-09-05,Vrijdag,Vrij,Vakantie,-,-,-,-,36,2025
+2025-09-02,Dinsdag,Thuis,Thuis,-,Thuis,-,-,36,2025
+2025-09-03,Woensdag,Apeldoorn,-,-,Apeldoorn,-,-,36,2025
+2025-09-04,Donderdag,Apeldoorn,Apeldoorn,-,Apeldoorn,-,-,36,2025
+2025-09-05,Vrijdag,Vrij,Vakantie,-,Thuis,-,-,36,2025
 2025-09-08,Maandag,Thuis,Vakantie,-,-,-,-,37,2025
 2025-09-09,Dinsdag,Bosconferentie?,Thuis,-,-,-,-,37,2025
 2025-09-10,Woensdag,Bosconferentie?,N.T.B.: TROI Usability,-,-,-,-,37,2025
