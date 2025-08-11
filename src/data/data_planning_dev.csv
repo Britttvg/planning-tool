@@ -31,7 +31,7 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-08-08,Vrijdag,Vrij,Thuis,Verlof,-,-,-,32,2025
 2025-08-11,Maandag,Thuis,Vrij,Verlof,Thuis,Thuis,-,33,2025
 2025-08-12,Dinsdag,Thuis,Thuis,Verlof,Thuis,Thuis,-,33,2025
-2025-08-13,Woensdag,Apeldoorn,Apeldoorn,Verlof,Apeldoorn,Apeldoorn,-,33,2025
+2025-08-13,Woensdag,Apeldoorn (ochtend),Apeldoorn,Verlof,Apeldoorn,Apeldoorn,-,33,2025
 2025-08-14,Donderdag,Apeldoorn,Apeldoorn/HUB50,Verlof,Apeldoorn,Vrij,-,33,2025
 2025-08-15,Vrijdag,Vrij,Thuis,Apeldoorn?,-,-,-,33,2025
 2025-08-18,Maandag,Thuis,Vrij,-,Thuis,Thuis,-,34,2025
@@ -50,9 +50,9 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-09-04,Donderdag,Apeldoorn,Apeldoorn,-,Apeldoorn,Apeldoorn,-,36,2025
 2025-09-05,Vrijdag,Vrij,Vakantie,-,Thuis,-,-,36,2025
 2025-09-08,Maandag,Thuis,Vakantie,-,-,Thuis,-,37,2025
-2025-09-09,Dinsdag,Bosconferentie?,Thuis,-,-,Thuis / Apeldoorn,-,37,2025
-2025-09-10,Woensdag,Bosconferentie?,N.T.B.: TROI Usability,-,-,Apeldoorn,-,37,2025
-2025-09-11,Donderdag,Bosconferentie?,HUB50,-,-,Apeldoorn,-,37,2025
+2025-09-09,Dinsdag,Thuis,Thuis,-,-,Thuis / Apeldoorn,-,37,2025
+2025-09-10,Woensdag,Apeldoorn,N.T.B.: TROI Usability,-,-,Apeldoorn,-,37,2025
+2025-09-11,Donderdag,Apeldoorn,HUB50,-,-,Apeldoorn,-,37,2025
 2025-09-12,Vrijdag,Vrij,Thuis,-,-,-,-,37,2025
 2025-09-15,Maandag,Thuis,-,-,-,Thuis,-,38,2025
 2025-09-16,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,38,2025
