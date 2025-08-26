@@ -39,10 +39,10 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-08-20,Woensdag,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,-,34,2025
 2025-08-21,Donderdag,Apeldoorn,HUB50 (Workshop),Apeldoorn,Apeldoorn,Apeldoorn,-,34,2025
 2025-08-22,Vrijdag,Vrij,Apeldoorn/Thuis,Apeldoorn,-,-,-,34,2025
-2025-08-25,Maandag,Thuis,Vrij,Apeldoorn,Thuis,Thuis,-,35,2025
+2025-08-25,Maandag,Vrij,Vrij,Apeldoorn,Thuis,Thuis,-,35,2025
 2025-08-26,Dinsdag,Thuis,Thuis,Apeldoorn,Nijmegen,Thuis / Apeldoorn,-,35,2025
 2025-08-27,Woensdag,Apeldoorn,Training(?)/Apeldoorn,Apeldoorn,Apeldoorn,Thuis,-,35,2025
-2025-08-28,Donderdag,Apeldoorn,Apeldoorn/HUB,Apeldoorn / Arnhem,Apeldoorn,Apeldoorn,-,35,2025
+2025-08-28,Donderdag,Arnhem,Apeldoorn/HUB,Apeldoorn / Arnhem,Apeldoorn,Apeldoorn,-,35,2025
 2025-08-29,Vrijdag,Vrij,Thuis,-,-,Thuis (ochtend),-,35,2025
 2025-09-01,Maandag,Thuis,Vrij,-,-,Thuis,-,36,2025
 2025-09-02,Dinsdag,Thuis,Thuis,Apeldoorn,Thuis,HUB50,-,36,2025
@@ -50,55 +50,55 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-09-04,Donderdag,Apeldoorn,Apeldoorn/HUB DUO op bezoek,Apeldoorn,Apeldoorn,Thuis (Sanquin in ochtend),-,36,2025
 2025-09-05,Vrijdag,Vrij,Vakantie,Apeldoorn,Thuis,-,-,36,2025
 2025-09-08,Maandag,Thuis,Vakantie,-,Thuis,Vrij,-,37,2025
-2025-09-09,Dinsdag,Thuis,TROI Training Eindhoven,Apeldoorn,Thuis,Vrij,-,37,2025
+2025-09-09,Dinsdag,TROI Training Eindhoven,TROI Training Eindhoven,Apeldoorn,Thuis,Vrij,-,37,2025
 2025-09-10,Woensdag,Apeldoorn,N.T.B.: TROI Usability,Apeldoorn,Apeldoorn,Vrij,-,37,2025
 2025-09-11,Donderdag,Apeldoorn,HUB50,Apeldoorn,Apeldoorn,Vrij,-,37,2025
 2025-09-12,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,-,37,2025
 2025-09-15,Maandag,Thuis,Vrij,-,Thuis,Vrij,-,38,2025
 2025-09-16,Dinsdag,Thuis,Thuis,Apeldoorn,Thuis,Vrij,-,38,2025
-2025-09-17,Woensdag,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Vrij,-,38,2025
+2025-09-17,Woensdag,Thuis,Apeldoorn,Apeldoorn,Apeldoorn,Vrij,-,38,2025
 2025-09-18,Donderdag,Vrij,TROI Training Eindhoven,Eindhoven de gekste,Apeldoorn,Vrij,-,38,2025
 2025-09-19,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,-,38,2025
-2025-09-22,Maandag,-,-,-,-,Thuis,-,39,2025
-2025-09-23,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,39,2025
-2025-09-24,Woensdag,-,-,-,-,Apeldoorn,-,39,2025
-2025-09-25,Donderdag,-,-,-,-,Apeldoorn,-,39,2025
-2025-09-26,Vrijdag,-,-,-,-,-,-,39,2025
-2025-09-29,Maandag,-,-,-,-,Thuis,-,40,2025
-2025-09-30,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,40,2025
-2025-10-01,Woensdag,-,-,-,-,Apeldoorn,-,40,2025
-2025-10-02,Donderdag,-,-,-,-,Apeldoorn,-,40,2025
-2025-10-03,Vrijdag,-,-,-,-,-,-,40,2025
-2025-10-06,Maandag,-,-,-,-,Thuis,-,41,2025
-2025-10-07,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,41,2025
-2025-10-08,Woensdag,-,-,-,-,Apeldoorn,-,41,2025
-2025-10-09,Donderdag,-,-,-,-,Apeldoorn,-,41,2025
-2025-10-10,Vrijdag,-,-,-,-,-,-,41,2025
-2025-10-13,Maandag,-,-,-,-,Thuis,-,42,2025
-2025-10-14,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,42,2025
-2025-10-15,Woensdag,-,-,-,-,Apeldoorn,-,42,2025
-2025-10-16,Donderdag,-,-,-,-,Apeldoorn,-,42,2025
-2025-10-17,Vrijdag,-,-,-,-,-,-,42,2025
-2025-10-20,Maandag,-,-,-,-,Thuis,-,43,2025
-2025-10-21,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,43,2025
-2025-10-22,Woensdag,-,-,-,-,Apeldoorn,-,43,2025
-2025-10-23,Donderdag,-,-,-,-,Apeldoorn,-,43,2025
-2025-10-24,Vrijdag,-,-,-,-,-,-,43,2025
-2025-10-27,Maandag,-,-,-,-,Thuis,-,44,2025
-2025-10-28,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,44,2025
-2025-10-29,Woensdag,-,-,-,-,Apeldoorn,-,44,2025
-2025-10-30,Donderdag,-,-,-,-,Apeldoorn,-,44,2025
-2025-10-31,Vrijdag,-,-,-,-,-,-,44,2025
-2025-11-03,Maandag,-,-,-,-,Thuis,-,45,2025
-2025-11-04,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,45,2025
-2025-11-05,Woensdag,-,-,-,-,Apeldoorn,-,45,2025
-2025-11-06,Donderdag,-,-,-,-,Apeldoorn,-,45,2025
-2025-11-07,Vrijdag,-,-,-,-,-,-,45,2025
-2025-11-10,Maandag,-,-,-,-,Thuis,-,46,2025
-2025-11-11,Dinsdag,-,-,-,-,Thuis / Apeldoorn,-,46,2025
-2025-11-12,Woensdag,-,-,-,-,Apeldoorn,-,46,2025
-2025-11-13,Donderdag,-,-,-,-,Apeldoorn,-,46,2025
-2025-11-14,Vrijdag,-,-,-,-,-,-,46,2025
+2025-09-22,Maandag,Thuis,-,-,-,Thuis,-,39,2025
+2025-09-23,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,39,2025
+2025-09-24,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,39,2025
+2025-09-25,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,39,2025
+2025-09-26,Vrijdag,Vrij,-,-,-,-,-,39,2025
+2025-09-29,Maandag,DTT,-,-,-,Thuis,-,40,2025
+2025-09-30,Dinsdag,DTT,-,-,-,Thuis / Apeldoorn,-,40,2025
+2025-10-01,Woensdag,DTT,-,-,-,Apeldoorn,-,40,2025
+2025-10-02,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,40,2025
+2025-10-03,Vrijdag,Vrij,-,-,-,-,-,40,2025
+2025-10-06,Maandag,Thuis,-,-,-,Thuis,-,41,2025
+2025-10-07,Dinsdag,DTT,-,-,-,Thuis / Apeldoorn,-,41,2025
+2025-10-08,Woensdag,Frontmania Utrecht,-,-,-,Apeldoorn,-,41,2025
+2025-10-09,Donderdag,NIK themadag ??,-,-,-,Apeldoorn,-,41,2025
+2025-10-10,Vrijdag,Vrij,-,-,-,-,-,41,2025
+2025-10-13,Maandag,Thuis,-,-,-,Thuis,-,42,2025
+2025-10-14,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,42,2025
+2025-10-15,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,42,2025
+2025-10-16,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,42,2025
+2025-10-17,Vrijdag,Vrij,-,-,-,-,-,42,2025
+2025-10-20,Maandag,Thuis,-,-,-,Thuis,-,43,2025
+2025-10-21,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,43,2025
+2025-10-22,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,43,2025
+2025-10-23,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,43,2025
+2025-10-24,Vrijdag,Vrij,-,-,-,-,-,43,2025
+2025-10-27,Maandag,Thuis,-,-,-,Thuis,-,44,2025
+2025-10-28,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,44,2025
+2025-10-29,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,44,2025
+2025-10-30,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,44,2025
+2025-10-31,Vrijdag,Vrij,-,-,-,-,-,44,2025
+2025-11-03,Maandag,Funweek,-,-,-,Thuis,-,45,2025
+2025-11-04,Dinsdag,Funweek,-,-,-,Thuis / Apeldoorn,-,45,2025
+2025-11-05,Woensdag,Funweek,-,-,-,Apeldoorn,-,45,2025
+2025-11-06,Donderdag,Funweek,-,-,-,Apeldoorn,-,45,2025
+2025-11-07,Vrijdag,Vrij,-,-,-,-,-,45,2025
+2025-11-10,Maandag,Funweek,-,-,-,Thuis,-,46,2025
+2025-11-11,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,46,2025
+2025-11-12,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
+2025-11-13,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
+2025-11-14,Vrijdag,Vrij,-,-,-,-,-,46,2025
 2025-11-17,Maandag,-,-,-,-,Thuis?,-,47,2025
 2025-11-18,Dinsdag,-,-,-,-,Thuis?,-,47,2025
 2025-11-19,Woensdag,-,-,-,-,Thuis?,-,47,2025
