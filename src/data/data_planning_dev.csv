@@ -74,10 +74,10 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-10-08,Woensdag,Frontmania Utrecht,Apeldoorn,-,Apeldoorn,Apeldoorn,-,41,2025
 2025-10-09,Donderdag,NIK themadag ??,Apeldoorn/HUB,-,NIK-themadag,Apeldoorn,-,41,2025
 2025-10-10,Vrijdag,Vrij,Thuis,-,-,-,-,41,2025
-2025-10-13,Maandag,Thuis,Vrij,-,-,Thuis,-,42,2025
-2025-10-14,Dinsdag,Thuis,Thuis,-,-,Thuis / Apeldoorn,-,42,2025
-2025-10-15,Woensdag,Apeldoorn,Apeldoorn,-,-,Apeldoorn,-,42,2025
-2025-10-16,Donderdag,Apeldoorn,Apeldoorn/HUB,-,-,Apeldoorn,-,42,2025
+2025-10-13,Maandag,Thuis,Vrij,-,Thuis,Thuis,-,42,2025
+2025-10-14,Dinsdag,Thuis,Thuis,-,Thuis,Thuis / Apeldoorn,-,42,2025
+2025-10-15,Woensdag,Apeldoorn,Apeldoorn,-,Apeldoorn,Apeldoorn,-,42,2025
+2025-10-16,Donderdag,Apeldoorn,Apeldoorn/HUB,-,Apeldoorn,Apeldoorn,-,42,2025
 2025-10-17,Vrijdag,Vrij,Thuis,-,-,-,-,42,2025
 2025-10-20,Maandag,Thuis,-,-,-,Thuis,-,43,2025
 2025-10-21,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,43,2025
@@ -99,20 +99,20 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-11-12,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
 2025-11-13,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
 2025-11-14,Vrijdag,Vrij,-,-,-,-,-,46,2025
-2025-11-17,Maandag,-,-,-,-,Thuis?,-,47,2025
-2025-11-18,Dinsdag,-,-,-,-,Thuis?,-,47,2025
-2025-11-19,Woensdag,-,-,-,-,Thuis?,-,47,2025
-2025-11-20,Donderdag,-,-,-,-,Thuis?,-,47,2025
+2025-11-17,Maandag,-,-,-,Flikken ON,Thuis?,-,47,2025
+2025-11-18,Dinsdag,-,-,-,Flikken ON,Thuis?,-,47,2025
+2025-11-19,Woensdag,-,-,-,Flikken ON,Thuis?,-,47,2025
+2025-11-20,Donderdag,-,-,-,Flikken ON,Thuis?,-,47,2025
 2025-11-21,Vrijdag,-,-,-,-,-,-,47,2025
-2025-11-24,Maandag,-,-,-,-,-,-,48,2025
-2025-11-25,Dinsdag,-,-,-,-,-,-,48,2025
-2025-11-26,Woensdag,-,-,-,-,-,-,48,2025
-2025-11-27,Donderdag,-,-,-,-,-,-,48,2025
+2025-11-24,Maandag,-,-,-,Flikken ON,-,-,48,2025
+2025-11-25,Dinsdag,-,-,-,Flikken ON,-,-,48,2025
+2025-11-26,Woensdag,-,-,-,Flikken ON,-,-,48,2025
+2025-11-27,Donderdag,-,-,-,Flikken ON,-,-,48,2025
 2025-11-28,Vrijdag,-,-,-,-,-,-,48,2025
-2025-12-01,Maandag,-,-,-,-,-,-,49,2025
-2025-12-02,Dinsdag,-,-,-,-,-,-,49,2025
-2025-12-03,Woensdag,-,-,-,-,-,-,49,2025
-2025-12-04,Donderdag,-,-,-,-,-,-,49,2025
+2025-12-01,Maandag,-,-,-,Flikken ON,-,-,49,2025
+2025-12-02,Dinsdag,-,-,-,Flikken ON,-,-,49,2025
+2025-12-03,Woensdag,-,-,-,Flikken ON,-,-,49,2025
+2025-12-04,Donderdag,-,-,-,Flikken ON,-,-,49,2025
 2025-12-05,Vrijdag,-,-,-,-,-,-,49,2025
 2025-12-08,Maandag,-,-,-,-,-,-,50,2025
 2025-12-09,Dinsdag,-,-,-,-,-,-,50,2025
