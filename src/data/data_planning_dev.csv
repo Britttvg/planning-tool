@@ -70,16 +70,16 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-10-02,Donderdag,Apeldoorn,Apeldoorn/HUB,Apeldoorn,Enschede (DRIO Inkijkdag),Apeldoorn,Apeldoorn,40,2025
 2025-10-03,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,Thuis,40,2025
 2025-10-06,Maandag,Thuis,Vrij,Zwolle (ochtend),Zwolle,Thuis,Thuis,41,2025
-2025-10-07,Dinsdag,DTT,Thuis,Thuis,Thuis,Thuis / Apeldoorn,Thuis,41,2025
+2025-10-07,Dinsdag,Apeldoorn DTT,Thuis,Thuis,Thuis,Thuis / Apeldoorn,Thuis,41,2025
 2025-10-08,Woensdag,Frontmania Utrecht,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Utrecht,41,2025
-2025-10-09,Donderdag,NIK themadag ??,Apeldoorn/HUB,Ede,NIK-themadag,Apeldoorn,NIK Themadag,41,2025
+2025-10-09,Donderdag,NIK themadag Ede,Apeldoorn/HUB,Ede,NIK-themadag,Apeldoorn,NIK Themadag,41,2025
 2025-10-10,Vrijdag,Vrij,Thuis,-,-,-,Thuis,41,2025
 2025-10-13,Maandag,Thuis,Vrij,-,Thuis,Thuis,Thuis,42,2025
 2025-10-14,Dinsdag,Thuis,Thuis,Thuis,Thuis,Thuis / Apeldoorn,Thuis,42,2025
 2025-10-15,Woensdag,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,42,2025
 2025-10-16,Donderdag,Apeldoorn,Apeldoorn/HUB,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,42,2025
 2025-10-17,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,Thuis,42,2025
-2025-10-20,Maandag,Thuis,-,-,-,Thuis,-,43,2025
+2025-10-20,Maandag,HUB50 ??,-,-,-,Thuis,-,43,2025
 2025-10-21,Dinsdag,Thuis,-,Thuis,-,Thuis / Apeldoorn,-,43,2025
 2025-10-22,Woensdag,Apeldoorn,-,Apeldoorn,-,Apeldoorn,-,43,2025
 2025-10-23,Donderdag,Apeldoorn,-,Apeldoorn,-,Apeldoorn,-,43,2025
@@ -99,36 +99,36 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-11-12,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
 2025-11-13,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
 2025-11-14,Vrijdag,Vrij,-,-,-,-,-,46,2025
-2025-11-17,Maandag,-,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-18,Dinsdag,-,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-19,Woensdag,-,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-20,Donderdag,-,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-21,Vrijdag,-,-,-,-,-,-,47,2025
-2025-11-24,Maandag,-,-,-,Flikken ON,-,-,48,2025
-2025-11-25,Dinsdag,-,-,-,Flikken ON,-,-,48,2025
-2025-11-26,Woensdag,-,-,-,Flikken ON,-,-,48,2025
-2025-11-27,Donderdag,-,-,-,Flikken ON,-,-,48,2025
-2025-11-28,Vrijdag,-,-,-,-,-,-,48,2025
-2025-12-01,Maandag,-,-,-,Flikken ON,-,-,49,2025
-2025-12-02,Dinsdag,-,-,-,Flikken ON,-,-,49,2025
-2025-12-03,Woensdag,-,-,-,Flikken ON,-,-,49,2025
-2025-12-04,Donderdag,-,-,-,Flikken ON,-,-,49,2025
-2025-12-05,Vrijdag,-,-,-,-,-,-,49,2025
-2025-12-08,Maandag,-,-,-,-,-,-,50,2025
-2025-12-09,Dinsdag,-,-,-,-,-,-,50,2025
-2025-12-10,Woensdag,-,-,-,-,-,-,50,2025
-2025-12-11,Donderdag,-,-,-,-,-,-,50,2025
-2025-12-12,Vrijdag,-,-,-,-,-,-,50,2025
-2025-12-15,Maandag,-,-,-,-,-,-,51,2025
-2025-12-16,Dinsdag,-,-,-,-,-,-,51,2025
-2025-12-17,Woensdag,-,-,-,-,-,-,51,2025
-2025-12-18,Donderdag,-,-,-,-,-,-,51,2025
-2025-12-19,Vrijdag,-,-,-,-,-,-,51,2025
-2025-12-22,Maandag,-,-,-,-,-,-,52,2025
-2025-12-23,Dinsdag,-,-,-,-,-,-,52,2025
-2025-12-24,Woensdag,-,-,-,-,-,-,52,2025
-2025-12-25,Donderdag,-,-,-,-,-,-,52,2025
-2025-12-26,Vrijdag,-,-,-,-,-,-,52,2025
+2025-11-17,Maandag,DSI Nijmegen,-,-,Flikken ON,Thuis?,-,47,2025
+2025-11-18,Dinsdag,Thuis,-,-,Flikken ON,Thuis?,-,47,2025
+2025-11-19,Woensdag,Apeldoorn,-,-,Flikken ON,Thuis?,-,47,2025
+2025-11-20,Donderdag,Apeldoorn,-,-,Flikken ON,Thuis?,-,47,2025
+2025-11-21,Vrijdag,Thuis/vrij?,-,-,-,-,-,47,2025
+2025-11-24,Maandag,Vrij,-,-,Flikken ON,-,-,48,2025
+2025-11-25,Dinsdag,Vrij,-,-,Flikken ON,-,-,48,2025
+2025-11-26,Woensdag,Vrij,-,-,Flikken ON,-,-,48,2025
+2025-11-27,Donderdag,Vrij,-,-,Flikken ON,-,-,48,2025
+2025-11-28,Vrijdag,Vrij,-,-,-,-,-,48,2025
+2025-12-01,Maandag,Thuis,-,-,Flikken ON,-,-,49,2025
+2025-12-02,Dinsdag,Thuis,-,-,Flikken ON,-,-,49,2025
+2025-12-03,Woensdag,Vrij (bruiloft),-,-,Flikken ON,-,-,49,2025
+2025-12-04,Donderdag,Apeldoorn,-,-,Flikken ON,-,-,49,2025
+2025-12-05,Vrijdag,Thuis/vrij?,-,-,-,-,-,49,2025
+2025-12-08,Maandag,Thuis,-,-,-,-,-,50,2025
+2025-12-09,Dinsdag,Thuis,-,-,-,-,-,50,2025
+2025-12-10,Woensdag,Apeldoorn,-,-,-,-,-,50,2025
+2025-12-11,Donderdag,Apeldoorn,-,-,-,-,-,50,2025
+2025-12-12,Vrijdag,Vrij,-,-,-,-,-,50,2025
+2025-12-15,Maandag,Thuis,-,-,-,-,-,51,2025
+2025-12-16,Dinsdag,Thuis,-,-,-,-,-,51,2025
+2025-12-17,Woensdag,Apeldoorn,-,-,-,-,-,51,2025
+2025-12-18,Donderdag,Apeldoorn,-,-,-,-,-,51,2025
+2025-12-19,Vrijdag,Vrij,-,-,-,-,-,51,2025
+2025-12-22,Maandag,Thuis?,-,-,-,-,-,52,2025
+2025-12-23,Dinsdag,Thuis?,-,-,-,-,-,52,2025
+2025-12-24,Woensdag,Vrij,-,-,-,-,-,52,2025
+2025-12-25,Donderdag,Vrij (kerst),-,-,-,-,-,52,2025
+2025-12-26,Vrijdag,Vrij (kerst),-,-,-,-,-,52,2025
 2025-12-29,Maandag,-,-,-,-,-,-,1,2025
 2025-12-30,Dinsdag,-,-,-,-,-,-,1,2025
 2025-12-31,Woensdag,-,-,-,-,-,-,1,2025
