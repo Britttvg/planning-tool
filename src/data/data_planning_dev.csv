@@ -70,7 +70,7 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-10-02,Donderdag,Apeldoorn,Apeldoorn/HUB,Apeldoorn,Enschede (DRIO Inkijkdag),Apeldoorn,Apeldoorn,40,2025
 2025-10-03,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,Thuis,40,2025
 2025-10-06,Maandag,Thuis,Vrij,Zwolle (ochtend),Zwolle,Thuis,Thuis,41,2025
-2025-10-07,Dinsdag,Apeldoorn DTT,Thuis,Thuis,Thuis,Thuis / Apeldoorn,Thuis,41,2025
+2025-10-07,Dinsdag,Apeldoorn DTT,Thuis,Thuis,Apeldoorn,Thuis / Apeldoorn,Thuis,41,2025
 2025-10-08,Woensdag,Frontmania Utrecht,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Utrecht,41,2025
 2025-10-09,Donderdag,NIK themadag Ede,Apeldoorn/HUB,Ede,NIK-themadag,Apeldoorn,NIK Themadag,41,2025
 2025-10-10,Vrijdag,Vrij,Thuis,-,-,-,Thuis,41,2025
@@ -79,15 +79,15 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-10-15,Woensdag,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,42,2025
 2025-10-16,Donderdag,Apeldoorn,Apeldoorn/HUB,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,42,2025
 2025-10-17,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,Thuis,42,2025
-2025-10-20,Maandag,HUB50 ??,-,-,-,Thuis,-,43,2025
-2025-10-21,Dinsdag,Thuis,-,Thuis,-,Thuis / Apeldoorn,-,43,2025
-2025-10-22,Woensdag,Apeldoorn,-,Apeldoorn,-,Apeldoorn,-,43,2025
-2025-10-23,Donderdag,Apeldoorn,-,Apeldoorn,-,Apeldoorn,-,43,2025
+2025-10-20,Maandag,HUB50 ??,-,-,Utrecht,Thuis,-,43,2025
+2025-10-21,Dinsdag,Thuis,-,Thuis,Apeldoorn,Thuis / Apeldoorn,-,43,2025
+2025-10-22,Woensdag,Apeldoorn,-,Apeldoorn,Zwolle,Apeldoorn,-,43,2025
+2025-10-23,Donderdag,Apeldoorn,-,Apeldoorn,Kantoor,Apeldoorn,-,43,2025
 2025-10-24,Vrijdag,Vrij,-,Apeldoorn,-,-,-,43,2025
-2025-10-27,Maandag,Thuis,-,-,-,Thuis,-,44,2025
-2025-10-28,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,44,2025
-2025-10-29,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,44,2025
-2025-10-30,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,44,2025
+2025-10-27,Maandag,Thuis,-,-,Utrecht,Thuis,-,44,2025
+2025-10-28,Dinsdag,Thuis,-,-,Thuis,Thuis / Apeldoorn,-,44,2025
+2025-10-29,Woensdag,Apeldoorn,-,-,Apeldoorn,Apeldoorn,-,44,2025
+2025-10-30,Donderdag,Apeldoorn,-,-,Apeldoorn,Apeldoorn,-,44,2025
 2025-10-31,Vrijdag,Vrij,-,-,-,-,-,44,2025
 2025-11-03,Maandag,Funweek,-,-,-,Thuis,-,45,2025
 2025-11-04,Dinsdag,Funweek,-,-,-,Thuis / Apeldoorn,-,45,2025
