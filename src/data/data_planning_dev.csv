@@ -79,36 +79,36 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-10-15,Woensdag,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,42,2025
 2025-10-16,Donderdag,Apeldoorn,Apeldoorn/HUB,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,42,2025
 2025-10-17,Vrijdag,Vrij,Thuis,Apeldoorn,-,-,Thuis,42,2025
-2025-10-20,Maandag,HUB50 ??,-,-,Utrecht,Thuis,-,43,2025
-2025-10-21,Dinsdag,Thuis,-,Thuis,Apeldoorn,Thuis / Apeldoorn,-,43,2025
-2025-10-22,Woensdag,Apeldoorn,-,Apeldoorn,Zwolle,Apeldoorn,-,43,2025
-2025-10-23,Donderdag,Apeldoorn,-,Apeldoorn (middag),Apeldoorn,Apeldoorn,-,43,2025
-2025-10-24,Vrijdag,Vrij,-,Apeldoorn,-,-,-,43,2025
-2025-10-27,Maandag,Thuis,-,-,Utrecht,Thuis,-,44,2025
-2025-10-28,Dinsdag,Thuis,-,-,Thuis,Thuis / Apeldoorn,-,44,2025
-2025-10-29,Woensdag,Apeldoorn,-,-,Apeldoorn,Apeldoorn,-,44,2025
-2025-10-30,Donderdag,Apeldoorn,-,-,Apeldoorn,Apeldoorn,-,44,2025
-2025-10-31,Vrijdag,Vrij,-,-,-,-,-,44,2025
-2025-11-03,Maandag,Funweek,-,-,-,Thuis,-,45,2025
-2025-11-04,Dinsdag,Funweek,-,-,-,Thuis / Apeldoorn,-,45,2025
-2025-11-05,Woensdag,Funweek,-,-,-,Apeldoorn,-,45,2025
-2025-11-06,Donderdag,Funweek,-,-,-,Apeldoorn,-,45,2025
-2025-11-07,Vrijdag,Vrij,-,-,-,-,-,45,2025
-2025-11-10,Maandag,Funweek,-,-,-,Thuis,-,46,2025
-2025-11-11,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,-,46,2025
-2025-11-12,Woensdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
-2025-11-13,Donderdag,Apeldoorn,-,-,-,Apeldoorn,-,46,2025
-2025-11-14,Vrijdag,Vrij,-,-,-,-,-,46,2025
-2025-11-17,Maandag,DSI Nijmegen,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-18,Dinsdag,Thuis,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-19,Woensdag,Apeldoorn,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-20,Donderdag,Apeldoorn,-,-,Flikken ON,Thuis?,-,47,2025
-2025-11-21,Vrijdag,Thuis/vrij?,-,-,-,-,-,47,2025
-2025-11-24,Maandag,Vrij,-,-,Flikken ON,-,-,48,2025
-2025-11-25,Dinsdag,Vrij,-,-,Flikken ON,-,-,48,2025
-2025-11-26,Woensdag,Vrij,-,-,Flikken ON,-,-,48,2025
-2025-11-27,Donderdag,Vrij,-,-,Flikken ON,-,-,48,2025
-2025-11-28,Vrijdag,Vrij,-,-,-,-,-,48,2025
+2025-10-20,Maandag,HUB50 ??,-,-,Utrecht,Thuis,Thuis,43,2025
+2025-10-21,Dinsdag,Thuis,-,Thuis,Apeldoorn,Thuis / Apeldoorn,Thuis,43,2025
+2025-10-22,Woensdag,Apeldoorn,-,Apeldoorn,Zwolle,Apeldoorn,Apeldoorn,43,2025
+2025-10-23,Donderdag,Apeldoorn,-,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,43,2025
+2025-10-24,Vrijdag,Vrij,-,Apeldoorn,-,-,Thuis,43,2025
+2025-10-27,Maandag,Thuis,-,-,Utrecht,Thuis,Thuis,44,2025
+2025-10-28,Dinsdag,Thuis,-,-,Thuis,Thuis / Apeldoorn,Thuis,44,2025
+2025-10-29,Woensdag,Apeldoorn,-,-,Apeldoorn,Apeldoorn,Apeldoorn,44,2025
+2025-10-30,Donderdag,Apeldoorn,-,-,Apeldoorn,Apeldoorn,Apeldoorn,44,2025
+2025-10-31,Vrijdag,Vrij,-,-,-,-,Thuis,44,2025
+2025-11-03,Maandag,Funweek,-,-,-,Thuis,Thuis,45,2025
+2025-11-04,Dinsdag,Funweek,-,-,-,Thuis / Apeldoorn,Thuis,45,2025
+2025-11-05,Woensdag,Funweek,-,-,-,Apeldoorn,Apeldoorn,45,2025
+2025-11-06,Donderdag,Funweek,-,-,-,Apeldoorn,Apeldoorn,45,2025
+2025-11-07,Vrijdag,Vrij,-,-,-,-,Thuis,45,2025
+2025-11-10,Maandag,Funweek,-,-,-,Thuis,Thuis,46,2025
+2025-11-11,Dinsdag,Thuis,-,-,-,Thuis / Apeldoorn,Thuis,46,2025
+2025-11-12,Woensdag,Apeldoorn,-,-,-,Apeldoorn,Apeldoorn,46,2025
+2025-11-13,Donderdag,Apeldoorn,-,-,-,Apeldoorn,Apeldoorn,46,2025
+2025-11-14,Vrijdag,Vrij,-,-,-,-,Thuis,46,2025
+2025-11-17,Maandag,DSI Nijmegen,-,-,Flikken ON,Thuis?,Thuis,47,2025
+2025-11-18,Dinsdag,Thuis,-,-,Flikken ON,Thuis?,Thuis,47,2025
+2025-11-19,Woensdag,Apeldoorn,-,-,Flikken ON,Thuis?,Apeldoorn,47,2025
+2025-11-20,Donderdag,Apeldoorn,-,-,Flikken ON,Thuis?,Apeldoorn,47,2025
+2025-11-21,Vrijdag,Thuis/vrij?,-,-,-,-,Thuis,47,2025
+2025-11-24,Maandag,Vrij,-,-,Flikken ON,-,Thuis,48,2025
+2025-11-25,Dinsdag,Vrij,-,-,Flikken ON,-,Thuis,48,2025
+2025-11-26,Woensdag,Vrij,-,-,Flikken ON,-,Apeldoorn,48,2025
+2025-11-27,Donderdag,Vrij,-,-,Flikken ON,-,Apeldoorn,48,2025
+2025-11-28,Vrijdag,Vrij,-,-,-,-,Thuis,48,2025
 2025-12-01,Maandag,Thuis,-,-,Flikken ON,-,-,49,2025
 2025-12-02,Dinsdag,Thuis,-,-,Flikken ON,-,-,49,2025
 2025-12-03,Woensdag,Vrij (bruiloft),-,-,Flikken ON,-,-,49,2025
