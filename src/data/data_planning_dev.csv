@@ -89,12 +89,12 @@ Datum,Dag,Britt,Denise,Jeroen,Jeanne,Robin,Vincent,Week,Jaar
 2025-10-29,Woensdag,Apeldoorn,-,Apeldoorn,Apeldoorn,Apeldoorn,Apeldoorn,44,2025
 2025-10-30,Donderdag,Apeldoorn,-,Apeldoorn (ochtend),Utrecht,Apeldoorn,Apeldoorn,44,2025
 2025-10-31,Vrijdag,Vrij,-,Apeldoorn,-,-,Thuis,44,2025
-2025-11-03,Maandag,Funweek,-,-,-,Thuis,Thuis,45,2025
-2025-11-04,Dinsdag,Funweek,-,Thuis,-,Thuis / Apeldoorn,Thuis,45,2025
-2025-11-05,Woensdag,Funweek,-,Apeldoorn,-,Apeldoorn,Apeldoorn,45,2025
-2025-11-06,Donderdag,Funweek,-,Apeldoorn (ochtend),-,Apeldoorn,Apeldoorn,45,2025
+2025-11-03,Maandag,Funweek,-,-,Funweek,Thuis,Thuis,45,2025
+2025-11-04,Dinsdag,Funweek,-,Thuis,Funweek,Thuis / Apeldoorn,Thuis,45,2025
+2025-11-05,Woensdag,Funweek,-,Apeldoorn,Funweek,Apeldoorn,Apeldoorn,45,2025
+2025-11-06,Donderdag,Funweek,-,Apeldoorn (ochtend),Funweek,Apeldoorn,Apeldoorn,45,2025
 2025-11-07,Vrijdag,Vrij,-,Apeldoorn,-,-,Thuis,45,2025
-2025-11-10,Maandag,Funweek,-,-,-,Thuis,Thuis,46,2025
+2025-11-10,Maandag,Funweek,-,-,Funweek,Thuis,Thuis,46,2025
 2025-11-11,Dinsdag,Thuis,-,Thuis,-,Thuis / Apeldoorn,Thuis,46,2025
 2025-11-12,Woensdag,Apeldoorn,-,Apeldoorn,-,Apeldoorn,Apeldoorn,46,2025
 2025-11-13,Donderdag,Apeldoorn,-,Apeldoorn (ochtend),-,Apeldoorn,Apeldoorn,46,2025
