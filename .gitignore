@@ -64,3 +64,6 @@ venv.bak/
 notes.txt
 .streamlit/secrets.toml
 tmp_data/
+
+# Data files - keep private
+src/data/
