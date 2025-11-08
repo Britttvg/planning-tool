@@ -20,21 +20,6 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 # Load environment variables from .env file
 load_dotenv()
 
-# Data file paths
-PRIVATE_DATA_PATH = "private-data/data_planning_dev.csv"
-LOCAL_DATA_FALLBACK = "src/data/data_planning_dev.csv"
-
-def get_data_path():
-    """Get the appropriate data path - private submodule or local fallback."""
-    if os.path.exists(PRIVATE_DATA_PATH):
-        return PRIVATE_DATA_PATH
-    elif os.path.exists(LOCAL_DATA_FALLBACK):
-        st.warning("⚠️ Using local data file. Private data submodule not found.")
-        return LOCAL_DATA_FALLBACK
-    else:
-        st.error("❌ No data file found. Please set up the private data submodule.")
-        st.stop()
-
 def merge_all_edits(original_path: str) -> pd.DataFrame:
     """Merge original CSV with all per-week edits from tmp_data/."""
     df_original = pd.read_csv(original_path)
@@ -77,38 +62,18 @@ def commit_and_push_changes(source_data_path: str):
             merged = merge_all_edits(source_data_path)
             save_merged_to_repo_file(merged, source_data_path)
             
-            # Check if we're using private data submodule
-            if source_data_path.startswith("private-data/"):
-                # Push to private data repository
-                data_repo = git.Repo("private-data")
-                data_repo.git.add(".")
-                data_repo.index.commit(f'Update CSV data, time {datetime.now()}')
-                data_repo.remotes.origin.push()
-                
-                # Update main repository with new submodule reference
-                main_repo = git.Repo()
-                main_repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
-                main_repo.git.checkout('main')
-                main_repo.remotes.origin.pull()
-                main_repo.git.add("private-data")
-                main_repo.index.commit(f'Update data submodule reference, time {datetime.now()}')
-                main_repo.remotes.origin.push()
-                
-                success_message = "Data saved and pushed to private repository."
-            else:
-                # Fallback to old method for local files
-                repo = git.Repo()
-                repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
-                repo.git.checkout('main')
-                repo.remotes.origin.pull()
-                repo.git.add(source_data_path)
-                repo.index.commit(f'Update CSV {source_data_path}, time {datetime.now()}')
-                repo.remotes.origin.push()
-                
-                success_message = f"Data {source_data_path} saved and pushed to main repository."
+            repo = git.Repo()
+            repo.git.remote("set-url", "origin", f"https://{GITHUB_TOKEN}@github.com/Britttvg/planning-tool.git")
+            repo.git.checkout('main')
+            repo.remotes.origin.pull()
+
+            # Add, commit, and push the changes to the repository
+            repo.git.add(source_data_path)
+            repo.index.commit(f'Update CSV {source_data_path}, time {datetime.now()}')
+            repo.remotes.origin.push()
 
         # Temporary success message
-        success_placeholder.success(success_message)
+        success_placeholder.success(f"Data {source_data_path} saved and pushed to git.")
         time.sleep(1)
         success_placeholder.empty()
     except Exception as e:
@@ -173,9 +138,8 @@ with st.sidebar:
 #########################
 
 if choice == f"Week {datetime.today().isocalendar()[1]} - Dev":
-    data_path = get_data_path()
     st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)  
     if st.button(':bangbang: Synchroniseren'):
-        commit_and_push_changes(data_path)
+        commit_and_push_changes("src/data/data_planning_dev.csv")
     st.title(":blue[Dev]")
-    excel.show_excel(data_path)
+    excel.show_excel("src/data/data_planning_dev.csv")
